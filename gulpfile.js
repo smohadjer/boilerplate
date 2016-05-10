@@ -63,7 +63,7 @@ gulp.task('cssLint', ['sass'], function() {
 	return gulp.src('app/resources/css/styles.css')
 		.pipe(csslint())
 		.pipe(csslint.reporter())
-		.pipe(csslint.reporter('fail'));
+		//.pipe(csslint.reporter('fail'));
 });
 
 gulp.task('jsHint', function() {
