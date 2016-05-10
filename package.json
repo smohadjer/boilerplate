@@ -19,6 +19,7 @@
     "gulp-htmlhint": "^0.3.1",
     "gulp-if": "^2.0.0",
     "gulp-jshint": "^2.0.0",
+    "gulp-nunjucks-render": "^2.0.0",
     "gulp-sass": "2.1.1",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^1.5.1",

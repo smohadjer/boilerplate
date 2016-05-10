@@ -25,7 +25,10 @@ var gulp = require('gulp'),
 	gulpif = require('gulp-if'),
 	uglify = require('gulp-uglify'),
 	cssnano = require('gulp-cssnano'),
-	runSequence = require('run-sequence');
+	runSequence = require('run-sequence'),
+
+	//include
+	nunjucksRender = require('gulp-nunjucks-render');
 
 gulp.task('templates', function() {
 	gulp.src('app/resources/templates/*.hbs')
@@ -73,6 +76,17 @@ gulp.task('jsHint', function() {
 		.pipe(jshint.reporter('fail'));
 });
 
+gulp.task('nunjucks', function() {
+  // Gets .html and .nunjucks files in pages
+  return gulp.src('app/pages/**/*.+(html|nunjucks)')
+  // Renders template with nunjucks
+  .pipe(nunjucksRender({
+      path: ['app/templates']
+    }))
+  // output files in app folder
+  .pipe(gulp.dest('app'))
+});
+
 gulp.task('connect', function() {
 	connect.server({
 		port: 9000,
@@ -92,7 +106,7 @@ gulp.task('watch', function() {
 	gulp.watch('app/*.html', ['htmlHint']);
 });
 
-gulp.task('build:dev', ['templates', 'sass', 'cssLint', 'htmlHint', 'jsHint'], function() {
+gulp.task('build:dev', ['nunjucks', 'templates', 'sass', 'cssLint', 'htmlHint', 'jsHint'], function() {
 
 });
 

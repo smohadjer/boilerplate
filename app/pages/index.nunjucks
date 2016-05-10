@@ -1,0 +1,14 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+	<h1>Boilerplate for responsive Web projects</h1>
+
+	{% include "partials/test.nunjucks" %}
+
+	<!-- Importing Nunjucks Macro -->
+	{% import 'macros/navigation.nunjucks' as nav %}
+	<!-- Creating the navigation with activePage = 'home' -->
+	{{nav.active('home')}}
+
+{% endblock %}
