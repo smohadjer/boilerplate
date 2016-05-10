@@ -81,7 +81,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('open', function () {
-	return opn( 'http://localhost:8080' );
+	return opn( 'http://localhost:9000' );
 });
 
 gulp.task('watch', function() {
@@ -132,10 +132,14 @@ gulp.task('connect:build', function() {
 	});
 });
 
+gulp.task('open:build', function () {
+	return opn( 'http://localhost:8080' );
+});
+
 gulp.task('build', function(callback) {
 	runSequence(
 		['clean', 'build:dev'],
 		['copy', 'useref'],
 		'connect:build',
-		'open', callback);
+		'open:build', callback);
 });
