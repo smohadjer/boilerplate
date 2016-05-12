@@ -8,8 +8,7 @@
  * Minifies CSS and JavaScript for production
  * Uses Handlebars for client-side templating and Nunjucks for server-side templating
  * Precompiles Handlebars templates
- * Fetches jQuery via bower
- * Uses jQuery plugin boilerplate
+ * jQuery ready (fetches jQuery via bower and contains a boilerplate for jQuery plugin)
 
 **Usage**
  * Run npm install
