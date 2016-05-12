@@ -4,8 +4,8 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 
 	//local server
-	opn = require('opn'),
 	connect = require('gulp-connect'),
+	opn = require('opn'),
 
 	//precompiling handlebars templates
 	handlebars = require('gulp-handlebars'),
@@ -30,6 +30,13 @@ var gulp = require('gulp'),
 	//include
 	nunjucksRender = require('gulp-nunjucks-render');
 
+gulp.task('clean:tmp', function () {
+	return del([
+		'.tmp/**/*'
+	]);
+});
+
+//precompile handlebars templates
 gulp.task('templates', function() {
 	gulp.src('app/resources/templates/*.hbs')
 		.pipe(handlebars({
@@ -41,29 +48,30 @@ gulp.task('templates', function() {
 			noRedeclare: true, // Avoid duplicate declarations
 		}))
 		.pipe(concat('templates.js'))
-		.pipe(gulp.dest('app/resources/templates/'));
+		.pipe(gulp.dest('.tmp/resources/js/'));
 });
 
 gulp.task('sass', function () {
 	var stream = gulp.src('app/resources/css/styles.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(sourcemaps.write('./maps'))
+		.pipe(sourcemaps.write('/maps'))
 		//.pipe(cssHint())
-		.pipe(gulp.dest('app/resources/css'));
+		.pipe(gulp.dest('.tmp/resources/css'))
+		.pipe(connect.reload());
 
 	return stream;
 });
 
 gulp.task('htmlHint', function() {
-	var stream = gulp.src('app/*.html')
+	var stream = gulp.src('.tmp/*.html')
 		.pipe(htmlhint())
 		.pipe(htmlhint.failReporter());
 	return stream;
 });
 
-gulp.task('cssLint', ['sass'], function() {
-	return gulp.src('app/resources/css/styles.css')
+gulp.task('cssLint', function() {
+	return gulp.src('.tmp/resources/css/styles.css')
 		.pipe(csslint())
 		.pipe(csslint.reporter())
 		//.pipe(csslint.reporter('fail'));
@@ -73,24 +81,36 @@ gulp.task('jsHint', function() {
 	return gulp.src('app/resources/js/*.js')
 		.pipe(jshint())
 		.pipe(jshint.reporter(stylish))
-		.pipe(jshint.reporter('fail'));
+		.pipe(jshint.reporter('fail'))
+		.pipe(connect.reload());
 });
 
+//include partials
 gulp.task('nunjucks', function() {
-  // Gets .html and .nunjucks files in pages
-  return gulp.src('app/pages/**/*.+(html|nunjucks)')
-  // Renders template with nunjucks
-  .pipe(nunjucksRender({
-      path: ['app/templates']
-    }))
-  // output files in app folder
-  .pipe(gulp.dest('app'))
+	return gulp.src('app/*.html')
+		// Renders template with nunjucks
+		.pipe(nunjucksRender({
+			path: ['app/_partials']
+		}))
+		.pipe(gulp.dest('.tmp'))
+		.pipe(connect.reload());
 });
 
-gulp.task('connect', function() {
+gulp.task('watch', function() {
+	gulp.watch('app/resources/css/*.scss', ['sass']);
+	gulp.watch('app/resources/templates/*.hbs', ['templates']);
+	gulp.watch(['app/*.html', 'app/_partials/**/*.html'], ['nunjucks']);
+
+	gulp.watch('app/resources/js/*.js', ['jsHint']);
+	gulp.watch('.tmp/resources/css/styles.css', ['cssLint']);
+	gulp.watch('.tmp/*.html', ['htmlHint']);
+});
+
+gulp.task('connectDev', function () {
 	connect.server({
+		root: ['.tmp', 'app'],
 		port: 9000,
-		root: 'app'
+		livereload: true
 	});
 });
 
@@ -98,33 +118,28 @@ gulp.task('open', function () {
 	return opn( 'http://localhost:9000' );
 });
 
-gulp.task('watch', function() {
-	gulp.watch('app/resources/css/*.scss', ['sass']);
-	gulp.watch('app/resources/css/styles.css', ['cssLint']);
-	gulp.watch('app/resources/templates/*.hbs', ['templates']);
-	gulp.watch('app/resources/js/*.js', ['jsHint']);
-	gulp.watch('app/*.html', ['htmlHint']);
-});
-
-gulp.task('build:dev', ['nunjucks', 'templates', 'sass', 'cssLint', 'htmlHint', 'jsHint'], function() {
-
+gulp.task('build:dev', function(callback) {
+	runSequence(
+		'clean:tmp',
+		['nunjucks', 'templates', 'sass', 'jsHint'],
+		['htmlHint', 'cssLint'], callback);
 });
 
 gulp.task('serve', ['build:dev'], function(callback) {
 	runSequence(
-		'connect',
+		'connectDev',
 		'open',
 		'watch', callback);
 });
 
-/**************** build tasks *****************/
-gulp.task('clean', function () {
+/**************** build production files in dist folder *****************/
+gulp.task('clean:dist', function () {
 	return del([
 		'./dist/**/*'
 	]);
 });
 
-gulp.task('copy', function() {
+gulp.task('copy:assets', function() {
 	var stream = gulp.src('app/_assets/**/*')
 		.pipe(gulp.dest('dist/_assets'));
 	return stream;
@@ -152,8 +167,8 @@ gulp.task('open:build', function () {
 
 gulp.task('build', function(callback) {
 	runSequence(
-		['clean', 'build:dev'],
-		['copy', 'useref'],
+		['clean:dist', 'build:dev'],
+		['copy:assets', 'useref'],
 		'connect:build',
 		'open:build', callback);
 });

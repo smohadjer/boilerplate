@@ -15,7 +15,7 @@
 
 	$.extend( Plugin.prototype, {
 		init: function() {
-			this.yourOtherFunction("jQuery Boilerplate");
+			this.yourOtherFunction("Hello World!");
 		},
 		yourOtherFunction: function(text) {
 			console.log(text);
