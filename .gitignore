@@ -1,9 +1,5 @@
 /.tmp
 app/resources/bower_components
-app/resources/css/**/*.css
-app/resources/css/**/*.map
-app/resources/templates/templates.js
-app/*.html
 /dist
 /node_modules
 /npm-debug.log

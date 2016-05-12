@@ -1,0 +1,13 @@
+{% extends "layout/layout.html" %}
+
+{% block content %}
+	<h1>Boilerplate for responsive Web projects</h1>
+	<p>This boilerplate uses Handlebars for client-side templating and Nunjucks for server-side templating.</p>
+	{% include "partials/test.html" %}
+
+	<!-- Importing Nunjucks Macro -->
+	{% import 'macros/navigation.html' as nav %}
+	<!-- Creating the navigation with activePage = 'home' -->
+	{{nav.active('home')}}
+
+{% endblock %}
