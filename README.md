@@ -1,5 +1,5 @@
 
-A minimal boilerplate for responsive Websites
+#A minimal boilerplate for responsive Websites
 
 **Features**
  * Runs a local server with live reload
