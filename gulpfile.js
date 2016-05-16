@@ -47,7 +47,7 @@ gulp.task('templates', function() {
 			namespace: 'MyApp.templates',
 			noRedeclare: true, // Avoid duplicate declarations
 		}))
-		.pipe(concat('templates.js'))
+		.pipe(concat('handlebars.templates.js'))
 		.pipe(gulp.dest('.tmp/resources/js/'));
 });
 
@@ -146,7 +146,7 @@ gulp.task('copy:assets', function() {
 });
 
 gulp.task('useref', function() {
-	var stream = gulp.src('app/*.html')
+	var stream = gulp.src('.tmp/*.html')
 		.pipe(useref())
 		.pipe(gulpif('*.js', uglify()))
 		.pipe(gulpif('*.css', cssnano()))

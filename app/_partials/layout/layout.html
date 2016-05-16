@@ -9,14 +9,13 @@
 		<link rel="stylesheet" href="resources/css/styles.css">
 		<!-- endbuild -->
 	</head>
-
 	<body>
 	<!-- You write code for this content block in another file -->
-    {% block content %} {% endblock %}
-		<!-- build:js resources/js/scripts.min.js -->
+		{% block content %} {% endblock %}
+		<!-- build:js(app) resources/js/scripts.min.js -->
 		<script src="resources/bower_components/jquery/dist/jquery.js"></script>
 		<script src="resources/bower_components/handlebars/handlebars.runtime.js"></script>
-		<script src="resources/js/templates.js"></script>
+		<script src="../.tmp/resources/js/handlebars.templates.js"></script>
 		<script src="resources/js/jquery.boilerplate.js"></script>
 		<script src="resources/js/main.js"></script>
 		<!-- endbuild -->
