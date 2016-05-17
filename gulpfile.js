@@ -145,6 +145,12 @@ gulp.task('copy:assets', function() {
 	return stream;
 });
 
+gulp.task('copy:img', function() {
+	var stream = gulp.src('app/resources/img/**/*')
+		.pipe(gulp.dest('dist/resources/img'));
+	return stream;
+});
+
 gulp.task('useref', function() {
 	var stream = gulp.src('.tmp/*.html')
 		.pipe(useref())
@@ -168,7 +174,7 @@ gulp.task('open:build', function () {
 gulp.task('build', function(callback) {
 	runSequence(
 		['clean:dist', 'build:dev'],
-		['copy:assets', 'useref'],
+		['copy:assets', 'copy:img', 'useref'],
 		'connect:build',
 		'open:build', callback);
 });
