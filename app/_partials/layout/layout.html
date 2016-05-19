@@ -11,7 +11,10 @@
 		<!-- endbuild -->
 	</head>
 	<body>
-	<!-- You write code for this content block in another file -->
+		<!-- Importing Nunjucks Macro -->
+		{% import 'macros/navigation.html' as nav %}
+		{{nav.active( currentPage )}}
+
 		{% block content %} {% endblock %}
 		<!-- build:js({.tmp,app}) resources/js/scripts.min.js -->
 		<script src="resources/bower_components/jquery/dist/jquery.js"></script>

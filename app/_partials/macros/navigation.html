@@ -1,7 +1,7 @@
-{% macro active(activePage='home') %}
+{% macro active(page) %}
 <nav>
-  <a href="#" class="{%if activePage == 'home' %} active {% endif %}">Home</a>
-  <a href="#" class="{%if activePage == 'about' %} active {% endif %}">About</a>
-  <a href="#" class="{%if activePage == 'contact' %} active {% endif %}">Contact</a>
+  <a href="#" {%if page == 'home' %} class="active" {% endif %}>Home</a>
+  <a href="#" {%if page == 'about' %} class="active" {% endif %}>About</a>
+  <a href="#" {%if page == 'contact' %} class="active" {% endif %}>Contact</a>
 </nav>
 {% endmacro %}
