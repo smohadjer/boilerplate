@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	'use strict';
+
 	//example of calling a jQuery plugin
 	$('body').defaultPluginName();
 

@@ -1,8 +1,8 @@
 //based on https://github.com/jquery-boilerplate/jquery-boilerplate
 ;( function( $, window, document, undefined ) {
-	"use strict";
+	'use strict';
 
-	var pluginName = "defaultPluginName",
+	var pluginName = 'defaultPluginName',
 		defaults = {};
 
 	function Plugin ( element, options ) {
@@ -15,7 +15,7 @@
 
 	$.extend( Plugin.prototype, {
 		init: function() {
-			this.yourOtherFunction("Hello World!");
+			this.yourOtherFunction('Hello World!');
 		},
 		yourOtherFunction: function(text) {
 			console.log(text);
@@ -26,8 +26,8 @@
 	// preventing against multiple instantiations
 	$.fn[ pluginName ] = function( options ) {
 		return this.each( function() {
-			if ( !$.data( this, "plugin_" + pluginName ) ) {
-				$.data( this, "plugin_" +
+			if ( !$.data( this, 'plugin_' + pluginName ) ) {
+				$.data( this, 'plugin_' +
 					pluginName, new Plugin( this, options ) );
 			}
 		} );
