@@ -1,6 +1,8 @@
 
 #A minimal boilerplate for responsive Websites
 
+Demo: http://smohadjer.github.io/boilerplate/dist/
+
 **Features**
  * Runs a local server with live reload
  * Adds support for Sass
