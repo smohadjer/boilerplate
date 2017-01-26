@@ -1,6 +1,5 @@
 /.tmp
 app/resources/bower_components
-/dist
 /node_modules
 /npm-debug.log
 .DS_Store
