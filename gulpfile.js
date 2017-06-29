@@ -26,9 +26,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	cssnano = require('gulp-cssnano'),
 	runSequence = require('run-sequence'),
-
-	//include
-	nunjucksRender = require('gulp-nunjucks-render');
+	zetzer = require('gulp-zetzer');
 
 gulp.task('clean:tmp', function () {
 	return del([
@@ -85,22 +83,26 @@ gulp.task('jsHint', function() {
 		.pipe(connect.reload());
 });
 
-//include partials
-gulp.task('nunjucks', function() {
-	return gulp.src('app/*.html')
-		// Renders template with nunjucks
-		.pipe(nunjucksRender({
-			path: ['app/_partials']
+gulp.task('zetzer', function(){
+	gulp.src('./app/*.html')
+		.pipe(zetzer({
+			partials: './app/_partials',
+			templates: './app/_layouts',
+			dot_template_settings: {
+				strip: false
+			},
+			env: {
+				env_string: 'Some plain string to use with it.document.env_string'
+			}
 		}))
-		.pipe(gulp.dest('.tmp'))
+		.pipe(gulp.dest('./.tmp'))
 		.pipe(connect.reload());
 });
 
 gulp.task('watch', function() {
 	gulp.watch('app/resources/css/*.scss', ['sass']);
 	gulp.watch('app/resources/templates/*.hbs', ['templates']);
-	gulp.watch(['app/*.html', 'app/_partials/**/*.html'], ['nunjucks']);
-
+	gulp.watch(['app/*.html', 'app/partials/**/*.html', 'app/layouts/**/*.html'], ['zetzer']);
 	gulp.watch('app/resources/js/*.js', ['jsHint']);
 	gulp.watch('.tmp/resources/css/styles.css', ['cssLint']);
 	gulp.watch('.tmp/*.html', ['htmlHint']);
@@ -121,7 +123,7 @@ gulp.task('open', function () {
 gulp.task('build:dev', function(callback) {
 	runSequence(
 		'clean:tmp',
-		['nunjucks', 'templates', 'sass', 'jsHint'],
+		['zetzer', 'templates', 'sass', 'jsHint'],
 		['htmlHint', 'cssLint'], callback);
 });
 

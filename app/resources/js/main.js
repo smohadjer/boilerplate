@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 	'use strict';
 
 	//example of calling a jQuery plugin

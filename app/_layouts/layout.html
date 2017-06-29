@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Frontend boilerplate</title>
+		<title>{{= it.document.title || "Boilerplate for responsive Websites" }}</title>
 		<meta name="description" content="Boilerplate for Web projects">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" href="apple-touch-icon.png">
@@ -12,11 +12,8 @@
 		<!-- endbuild -->
 	</head>
 	<body>
-		<!-- Importing Nunjucks Macro -->
-		{% import 'macros/navigation.html' as nav %}
-		{{nav.active( currentPage )}}
-
-		{% block content %} {% endblock %}
+		{{= it.include("nav.html", {"id": it.document.pageId}) }}
+		{{# partial.content }}
 		<!-- build:js({.tmp,app}) resources/js/scripts.min.js -->
 		<script src="resources/bower_components/jquery/dist/jquery.js"></script>
 		<script src="resources/bower_components/handlebars/handlebars.runtime.js"></script>
