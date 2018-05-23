@@ -19,6 +19,8 @@ var gulp = require('gulp'),
 	stylish = require('jshint-stylish'),
 	csslint = require('gulp-csslint'),
 
+	debug = require('gulp-debug'),
+
 	//build
 	del = require('del'),
 	useref = require('gulp-useref'),
@@ -26,6 +28,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	cssnano = require('gulp-cssnano'),
 	runSequence = require('run-sequence'),
+	npmDist = require('gulp-npm-dist'),
 	zetzer = require('gulp-zetzer');
 
 gulp.task('clean:tmp', function () {
@@ -123,8 +126,10 @@ gulp.task('open', function () {
 gulp.task('build:dev', function(callback) {
 	runSequence(
 		'clean:tmp',
+		'copy:libs',
 		['zetzer', 'templates', 'sass', 'jsHint'],
-		['htmlHint', 'cssLint'], callback);
+		['htmlHint', 'cssLint'],
+		callback);
 });
 
 gulp.task('serve', ['build:dev'], function(callback) {
@@ -159,9 +164,19 @@ gulp.task('copy:img', function() {
 	return stream;
 });
 
+// copy package.json dependencies to .tmp
+gulp.task('copy:libs', function() {
+	var stream = gulp.src(npmDist({
+  		"copyUnminified": true
+    }), {base:'./node_modules'})
+		.pipe(gulp.dest('.tmp/resources/vendor'));
+	return stream;
+});
+
 gulp.task('useref', function() {
 	var stream = gulp.src('.tmp/*.html')
 		.pipe(useref())
+		.pipe(debug({title: 'useref:'}))
 		.pipe(gulpif('*.js', uglify()))
 		.pipe(gulpif('*.css', cssnano()))
 		.pipe(gulp.dest('dist'));
@@ -179,10 +194,11 @@ gulp.task('open:build', function () {
 	return opn( 'http://localhost:8080' );
 });
 
-gulp.task('build', function(callback) {
+gulp.task('build', ['clean:dist', 'build:dev'], function(callback) {
 	runSequence(
-		['clean:dist', 'build:dev'],
-		['copy:assets', 'copy:img', 'copy:appleIcon', 'useref'],
+		['copy:assets', 'copy:img', 'copy:appleIcon'],
+		'useref',
 		'connect:build',
-		'open:build', callback);
+		'open:build',
+		callback);
 });
