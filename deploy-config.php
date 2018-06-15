@@ -71,20 +71,14 @@ define('DELETE_FILES', false);
  * @var serialized array of strings
  */
 define('EXCLUDE', serialize(array(
-	'.git',
-	'.bowerrc',
-	'.editorconfig',
+	'dist',
+	'gulp-tasks',
 	'.gitignore',
-	'.gitattribute',
-	'.htaccess',
 	'.jshintrc',
-	'bower.json',
 	'gulpfile.js',
-	'*.json',
-	'*.php',
-	'*.md',
-	'app/resources',
-	'dist'
+	'/*.json',
+	'/*.php',
+	'app/resources'
 )));
 
 /**
