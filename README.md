@@ -1,19 +1,19 @@
 
-#A minimal boilerplate for responsive Websites
+#A boilerplate for small PHP Websites
 
-Demo: http://smohadjer.github.io/boilerplate/dist/
+Demo: http://saeidmohadjer.com/boilerplate/
 
 **Features**
- * Runs a local server with live reload
- * Adds support for Sass
- * Validates HTML, CSS, and JavaScript resources
- * Minifies CSS and JavaScript for production
- * Uses Handlebars for client-side templating and Nunjucks for server-side templating
+ * Auto deployment to production server
+ * Supports Sass
+ * Validates and minifies CSS and JavaScript resources
  * Precompiles Handlebars templates
- * jQuery ready (fetches jQuery via bower and contains a boilerplate for jQuery plugin)
 
 **Usage**
  * Run npm install
- * Run bower install
- * Run gulp serve (opens dev version in browser)
- * Run gulp build (builds production version and opens it in browser)
+ * Run gulp serve
+ * Run gulp build
+
+ **Requirements**
+ * PHP/Apache
+ * Nodejs

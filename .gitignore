@@ -1,5 +1,5 @@
 /.tmp
-app/resources/bower_components
 /node_modules
 /npm-debug.log
 .DS_Store
+/dist
