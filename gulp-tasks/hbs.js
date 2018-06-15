@@ -5,8 +5,8 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat');
 
 //precompile handlebars templates
-gulp.task('templates', function() {
-	gulp.src('app/resources/templates/*.hbs')
+gulp.task('hbs', function() {
+	gulp.src('app/resources/hbs/*.hbs')
 		.pipe(handlebars({
 			handlebars: require('handlebars')
 		}))

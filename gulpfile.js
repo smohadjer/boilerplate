@@ -9,7 +9,7 @@ gulp.task('build:dev', function(callback) {
 	runSequence(
 		'clean:tmp',
 		'copy:libs',
-		['templates', 'sass', 'jsHint'],
+		['hbs', 'sass', 'jsHint'],
 		['cssLint'],
 		callback);
 });
