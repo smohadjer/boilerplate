@@ -84,7 +84,7 @@ define('EXCLUDE', serialize(array(
 	'*.php',
 	'*.md',
 	'app/resources',
-	'app/*.*'
+	'dist'
 )));
 
 /**
