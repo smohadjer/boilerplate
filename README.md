@@ -1,7 +1,7 @@
 
 #A boilerplate for small PHP Websites
 
-Demo: http://saeidmohadjer.com/boilerplate/
+Demo: http://boilerplate.saeidmohadjer.com/
 
 **Features**
  * Auto deployment to production server
