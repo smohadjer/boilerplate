@@ -7,9 +7,15 @@ gulp.task('copy:assets', function() {
 	return stream;
 });
 
-gulp.task('copy:includes', function() {
-	var stream = gulp.src('app/includes/**/*')
-		.pipe(gulp.dest('dist/includes'));
+gulp.task('copy:content', function() {
+	var stream = gulp.src('app/content/**/*')
+		.pipe(gulp.dest('dist/content'));
+	return stream;
+});
+
+gulp.task('copy:root', function() {
+	var stream = gulp.src('app/*.php')
+		.pipe(gulp.dest('dist'));
 	return stream;
 });
 

@@ -6,11 +6,13 @@ var gulp = require('gulp'),
 	cssnano = require('gulp-cssnano');
 
 gulp.task('useref', function() {
-	var stream = gulp.src('app/*.php')
+	var stream = gulp.src('app/include/*')
 		.pipe(useref())
 		.pipe(debug({title: 'useref:'}))
 		.pipe(gulpif('*.js', uglify()))
 		.pipe(gulpif('*.css', cssnano()))
-		.pipe(gulp.dest('dist'));
+		.pipe(gulpif('**/*.js', gulp.dest('dist')))
+		.pipe(gulpif('**/*.css', gulp.dest('dist')))
+		.pipe(gulpif('**/*.html', gulp.dest('dist/include')));
 	return stream;
 });
