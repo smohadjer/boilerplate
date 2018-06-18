@@ -82,7 +82,8 @@ define('EXCLUDE', serialize(array(
 	'app/resources',
 	'app/include',
 	'app/*.php',
-	'app/*.png'
+	'app/*.png',
+	'app/*.md'
 )));
 
 /**
