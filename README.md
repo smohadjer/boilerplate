@@ -1,4 +1,4 @@
-Demo: http://boilerplate.saeidmohadjer.com/app/
+Demo: http://boilerplate.saeidmohadjer.com/
 
 **Features**
  * Auto deployment of content to production server
