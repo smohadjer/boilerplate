@@ -46,7 +46,7 @@ define('BRANCH', 'master');
  * @var string Full path including the trailing slash
  */
 //define('TARGET_DIR', '/is/htdocs/wp11222902_WNLKFK0OHC/www/live/solmazmohadjer.com/');
-define('TARGET_DIR', '/var/www/vhosts/saeidmohadjer.com/httpdocs/boilerplate/');
+define('TARGET_DIR', '/var/www/vhosts/saeidmohadjer.com/boilerplate.saeidmohadjer.com/');
 
 
 /**
@@ -71,6 +71,7 @@ define('DELETE_FILES', false);
  * @var serialized array of strings
  */
 define('EXCLUDE', serialize(array(
+	'.git',
 	'dist',
 	'gulp-tasks',
 	'.gitignore',
@@ -78,7 +79,10 @@ define('EXCLUDE', serialize(array(
 	'gulpfile.js',
 	'/*.json',
 	'/*.php',
-	'app/resources'
+	'app/resources',
+	'app/include',
+	'app/*.php',
+	'app/*.png'
 )));
 
 /**
