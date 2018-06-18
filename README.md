@@ -7,7 +7,7 @@ Demo: http://boilerplate.saeidmohadjer.com/app/
  * Precompiles Handlebars templates
 
 **Usage**
- * Cone repo and run: npm install
+ * Clone repo and run: npm install
  * Run: gulp serve
  * Run: gulp build 
 
