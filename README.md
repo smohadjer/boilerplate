@@ -1,6 +1,3 @@
-
-#A boilerplate for small PHP Websites
-
 Demo: http://boilerplate.saeidmohadjer.com/app/
 
 **Features**
