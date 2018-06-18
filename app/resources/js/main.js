@@ -8,8 +8,8 @@ $(function() {
 	Handlebars.registerPartial('myPartial', MyApp.templates.myPartial);
 	var template = MyApp.templates.helloWorld;
 	var html = template({
-		'title': 'Hello World',
-		'subtitle': 'Supports Sass and Handlebars!'
+		'title': 'Example of markup generated via js using handlebars',
+		'subtitle': 'This text comes from a hbs partial!'
 	});
-	$('body').append(html);
+	$('body > footer').before(html);
 });
