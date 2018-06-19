@@ -14,7 +14,7 @@ gulp.task('copy:content', function() {
 });
 
 gulp.task('copy:root', function() {
-	var stream = gulp.src('app/*.php')
+	var stream = gulp.src(['app/*.php', 'app/.htaccess'])
 		.pipe(gulp.dest('dist'));
 	return stream;
 });

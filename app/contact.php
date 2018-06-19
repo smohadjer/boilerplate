@@ -13,7 +13,9 @@
 	</head>
 	<body>
 		<?php include('include/header.php'); ?>
-		<?php include('content/contact.html'); ?>
+		<main>
+			<?php include('content/contact.html'); ?>
+		</main>
 		<?php include('include/footer.html'); ?>
 		<?php include('include/scripts.html'); ?>
 	</body>

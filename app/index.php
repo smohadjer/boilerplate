@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$pageId = 'home';
 	$navType = 'short';
 ?>
@@ -13,7 +13,9 @@
 	</head>
 	<body>
 		<?php include('include/header.php'); ?>
-		<?php include('content/home.html'); ?>
+		<main>
+			<?php include('content/home.html'); ?>
+		</main>
 		<?php include('include/footer.html'); ?>
 		<?php include('include/scripts.html'); ?>
 	</body>

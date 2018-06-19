@@ -20,5 +20,5 @@
 	"jquery": true,
 	"multistr" : true,
 	"maxcomplexity": 10,
-	"predef": [ "enquire", "$", "MyApp", "Modernizr", "Handlebars", "google", "_gaq", "moment"]
+	"predef": [ "enquire", "$", "myApp", "Modernizr", "Handlebars", "google", "_gaq", "moment"]
 }

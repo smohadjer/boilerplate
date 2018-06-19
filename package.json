@@ -32,7 +32,6 @@
 	},
 	"dependencies": {
 		"helpers": "git+https://github.com/smohadjer/helpers.git",
-		"jquery": "3.3.1",
 		"handlebars": "4.0.11"
 	}
 }

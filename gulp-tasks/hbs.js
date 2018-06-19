@@ -4,6 +4,9 @@ var gulp = require('gulp'),
 	declare = require('gulp-declare'),
 	concat = require('gulp-concat');
 
+var fs = require('fs');
+var json = JSON.parse(fs.readFileSync('./project.json'));
+
 //precompile handlebars templates
 gulp.task('hbs', function() {
 	gulp.src('app/resources/hbs/*.hbs')
@@ -12,7 +15,7 @@ gulp.task('hbs', function() {
 		}))
 		.pipe(wrap('Handlebars.template(<%= contents %>)'))
 		.pipe(declare({
-			namespace: 'MyApp.templates',
+			namespace: json.handlebars.namespace,
 			noRedeclare: true, // Avoid duplicate declarations
 		}))
 		.pipe(concat('handlebars.templates.js'))

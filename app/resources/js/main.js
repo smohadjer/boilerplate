@@ -1,15 +1,27 @@
-$(function() {
+(function() {
 	'use strict';
 
-	//example of calling a jQuery plugin
-	$('body').defaultPluginName();
+	//taken from http://youmightnotneedjquery.com/
+	function ready(fn) {
+		if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') {
+			fn();
+		} else {
+			document.addEventListener('DOMContentLoaded', fn);
+		}
+	}
 
-	//example of using a handlebars template
-	Handlebars.registerPartial('myPartial', MyApp.templates.myPartial);
-	var template = MyApp.templates.helloWorld;
-	var html = template({
-		'title': 'Example of markup generated via js using handlebars',
-		'subtitle': 'This text comes from a hbs partial!'
+	ready(function() {
+		console.log('DOM is ready!');
+
+		//example of using a handlebars template
+		Handlebars.registerPartial('myPartial', myApp.templates.myPartial);
+
+		var template = myApp.templates.helloWorld;
+		var html = template({
+			'title': 'Example of markup generated via js using handlebars',
+			'subtitle': 'This text comes from a hbs partial!'
+		});
+
+		document.querySelector('body > footer').insertAdjacentHTML('beforebegin', html);
 	});
-	$('body > footer').before(html);
-});
+})();
