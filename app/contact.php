@@ -1,6 +1,5 @@
 <?php
 	$pageId = 'contact';
-	$navType = 'short';
 ?>
 <!doctype html>
 <html lang="en">

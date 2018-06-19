@@ -1,7 +1,12 @@
 header .hamburger {
-	outline: none;
 	vertical-align: middle;
 	padding: 0;
+	padding-bottom: 20px;
+
+	&:focus {
+		outline: none;
+	}
+
 
 	&:hover {
 		opacity: 1;

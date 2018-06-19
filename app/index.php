@@ -1,6 +1,5 @@
 <?php
 	$pageId = 'home';
-	$navType = 'short';
 ?>
 <!doctype html>
 <html lang="en">

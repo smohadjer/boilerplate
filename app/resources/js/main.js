@@ -18,9 +18,11 @@
 
 		//hamburger button
 		const hamburger = document.querySelector('button.hamburger');
+		const nav = document.querySelector('header > nav');
 		if (hamburger) {
 			hamburger.addEventListener('click', function() {
 				hamburger.classList.toggle('is-active');
+				nav.classList.toggle('is-visible');
 			});
 		}
 

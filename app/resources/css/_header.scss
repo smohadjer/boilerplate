@@ -1,6 +1,5 @@
 header {
 	border-bottom: solid 1px #ccc;
-	padding: 20px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -9,10 +8,36 @@ header {
 		flex-wrap: wrap;
 	}
 
+	.logo {
+		padding: 20px;
+		background: #333;
+		text-transform: uppercase;
+		color: #fff;
+		display: inline-block;
+		margin: 0 20px 20px 0;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	nav {
+		margin-bottom: 20px;
+
 		@media (max-width: 767px) {
-			margin-top: 20px;
 			flex: 0 0 100%;
+
+			.js & {
+				overflow: hidden;
+				max-height: 0;
+				transition: max-height 0.5s;
+				margin-bottom: 0;
+
+				&.is-visible {
+					max-height: 300px;
+					margin-bottom: 20px;
+				}
+			}
 		}
 
 		ul {
@@ -29,19 +54,5 @@ header {
 				}
 			}
 		}
-	}
-
-	.logo {
-		padding: 20px;
-		background: #333;
-		text-transform: uppercase;
-		color: #fff;
-		display: inline-block;
-		margin-right: 20px;
-
-		&:hover {
-			text-decoration: none;
-		}
-
 	}
 }
