@@ -1,6 +1,6 @@
-<?php 
-	$pageId = 'home';
-	$navType = 'short';
+<?php
+	$pageId = 'about';
+	$navType = 'long';
 ?>
 <!doctype html>
 <html lang="en">
@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<?php include('include/header.php'); ?>
-		<?php include('content/home.html'); ?>
+		<?php include('content/about.html'); ?>
 		<?php include('include/footer.html'); ?>
 		<?php include('include/scripts.html'); ?>
 	</body>

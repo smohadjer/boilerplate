@@ -1,5 +1,5 @@
-<?php 
-	$pageId = 'home';
+<?php
+	$pageId = 'contact';
 	$navType = 'short';
 ?>
 <!doctype html>
@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<?php include('include/header.php'); ?>
-		<?php include('content/home.html'); ?>
+		<?php include('content/contact.html'); ?>
 		<?php include('include/footer.html'); ?>
 		<?php include('include/scripts.html'); ?>
 	</body>

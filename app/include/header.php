@@ -1,9 +1,12 @@
 <header>
+	<a class="logo" href="index.php">Logo</a>
 	<nav>
-		<ul>
-			<li><?php if ($pageId == 'home') {echo 'Home';} else {echo '<a href="index.php">Home</a>';}?></li>
-			<li><?php if ($pageId == 'about') {echo 'About';} else {echo '<a href="javascript:void(0);">About</a>';}?></li>
-			<li><?php if ($pageId == 'contact') {echo 'Contact';} else {echo '<a href="javascript:void(0);">Contact</a>';}?></li>
-		</ul>
+		<?php
+			if ($navType == 'short') {
+				include('include/nav-short.php');
+			} else {
+				include('include/nav-long.php');
+			}
+		?>
 	</nav>
 </header>
