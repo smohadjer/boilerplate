@@ -16,6 +16,14 @@
 		//example of using a handlebars template
 		Handlebars.registerPartial('myPartial', myApp.templates.myPartial);
 
+		//hamburger button
+		const hamburger = document.querySelector('button.hamburger');
+		if (hamburger) {
+			hamburger.addEventListener('click', function() {
+				hamburger.classList.toggle('is-active');
+			});
+		}
+
 		var template = myApp.templates.helloWorld;
 		var html = template({
 			'title': 'Example of markup generated via js using handlebars',

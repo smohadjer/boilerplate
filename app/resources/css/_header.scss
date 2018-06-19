@@ -1,16 +1,18 @@
 header {
 	border-bottom: solid 1px #ccc;
 	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-	@media (min-width: 768px) {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	@media (max-width: 767px) {
+		flex-wrap: wrap;
 	}
 
 	nav {
 		@media (max-width: 767px) {
 			margin-top: 20px;
+			flex: 0 0 100%;
 		}
 
 		ul {
