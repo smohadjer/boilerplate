@@ -10,6 +10,7 @@ gulp.task('build:dev', function(callback) {
 		'clean:tmp',
 		'copy:libs',
 		['hbs', 'sass', 'jsHint'],
+		'transpile',
 		['cssLint'],
 		callback);
 });
