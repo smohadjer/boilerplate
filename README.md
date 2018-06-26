@@ -5,7 +5,7 @@ Demo: http://boilerplate.saeidmohadjer.com/
  * Supports Sass
  * Validates and minifies CSS and JavaScript resources
  * Precompiles Handlebars templates
- * Auto deployment of content to production server
+ * Auto deployment of content from git repo to production server
 
 **Usage**
  * Clone repo and run: npm install
