@@ -8,7 +8,7 @@
 		<span class="hamburger-label">Menu</span>
 	</button>
 
-	<nav>
+	<nav data-set-max-height="true">
 		<ul>
 			<li><?php if ($pageId == 'home') {echo 'Home';} else {echo '<a href="index.php">Home</a>';}?></li>
 			<li><?php if ($pageId == 'about') {echo 'About';} else {echo '<a href="about.php">About</a>';}?></li>
@@ -17,7 +17,7 @@
 			<li><a href="javascript:void(0);">Consectetur</a></li>
 			<li><a href="javascript:void(0);">Duis aute</a></li>
 			<li><a href="javascript:void(0);">Proident</a></li>
-			<li><a href="javascript:void(0);">Exercitation</a></li>
+			<li><a href="javascript:void(0);">Last item in navigation</a></li>
 		</ul>
 	</nav>
 </header>

@@ -2,7 +2,7 @@
 	$pageId = 'contact';
 ?>
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
 	<head>
 		<meta charset="utf-8">
 		<?php include('content/title.html'); ?>

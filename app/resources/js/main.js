@@ -1,6 +1,11 @@
 (function() {
 	'use strict';
 
+	//Helper classes to HTML for styling of nojs version
+	const html = document.querySelector('html');
+	html.classList.remove('no-js');
+	html.classList.add('js');
+
 	//taken from http://youmightnotneedjquery.com/
 	function ready(fn) {
 		if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') {
@@ -11,27 +16,32 @@
 	}
 
 	ready(function() {
-		console.log('DOM is ready!');
+		console.log('DOM\'s ready...');
 
-		//example of using a handlebars template
-		Handlebars.registerPartial('myPartial', myApp.templates.myPartial);
+		//initialize navigation
+		const nav = new Navigation({
+			element: document.querySelector('header > nav')
+		});
 
 		//hamburger button
 		const hamburger = document.querySelector('button.hamburger');
-		const nav = document.querySelector('header > nav');
 		if (hamburger) {
 			hamburger.addEventListener('click', function() {
 				hamburger.classList.toggle('is-active');
-				nav.classList.toggle('is-visible');
+
+				if (nav.el) {
+					nav.el.classList.toggle('is-visible');
+				}
 			});
 		}
 
+		//example of using a handlebars template/partial
+		Handlebars.registerPartial('myPartial', myApp.templates.myPartial);
 		var template = myApp.templates.helloWorld;
 		var html = template({
 			'title': 'Example of markup generated via js using handlebars',
 			'subtitle': 'This text comes from a hbs partial!'
 		});
-
 		document.querySelector('body > footer').insertAdjacentHTML('beforebegin', html);
 	});
 })();

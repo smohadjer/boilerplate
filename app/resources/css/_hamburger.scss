@@ -3,10 +3,13 @@ header .hamburger {
 	padding: 0;
 	padding-bottom: 20px;
 
+	.no-js & {
+		display: none;
+	}
+
 	&:focus {
 		outline: none;
 	}
-
 
 	&:hover {
 		opacity: 1;
