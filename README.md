@@ -2,6 +2,7 @@ Demo: http://boilerplate.saeidmohadjer.com/
 
 **Features**
  * No dependency on jQuery
+ * ES6 ready (transpiling via Babel)
  * Supports Sass
  * Validates and minifies CSS and JavaScript resources
  * Precompiles Handlebars templates
