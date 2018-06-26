@@ -1,10 +1,11 @@
 Demo: http://boilerplate.saeidmohadjer.com/
 
 **Features**
- * Auto deployment of content to production server
+ * No dependency on jQuery
  * Supports Sass
  * Validates and minifies CSS and JavaScript resources
  * Precompiles Handlebars templates
+ * Auto deployment of content to production server
 
 **Usage**
  * Clone repo and run: npm install
