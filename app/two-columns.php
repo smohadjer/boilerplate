@@ -1,5 +1,5 @@
 <?php
-	$pageId = 'contact';
+	$pageId = 'two-columns';
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -12,10 +12,8 @@
 	</head>
 	<body>
 		<?php include('include/header.php'); ?>
-		<main>
-			<?php include('content/contact.html'); ?>
-		</main>
-		<?php include('include/footer.html'); ?>
+		<?php include('content/two-columns.html'); ?>
+		<?php include('include/footer.php'); ?>
 		<?php include('include/scripts.html'); ?>
 	</body>
 </html>

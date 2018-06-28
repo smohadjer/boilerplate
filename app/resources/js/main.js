@@ -42,6 +42,9 @@
 			'title': 'Example of markup generated via js using handlebars',
 			'subtitle': 'This text comes from a hbs partial!'
 		});
-		document.querySelector('body > footer').insertAdjacentHTML('beforebegin', html);
+		var aside = document.querySelector('aside');
+		if (aside) {
+			aside.innerHTML = html;
+		}
 	});
 })();
