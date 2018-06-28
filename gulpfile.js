@@ -8,7 +8,7 @@ requireDir('./gulp-tasks', { recurse: true });
 gulp.task('build:dev', function(callback) {
 	runSequence(
 		'clean:tmp',
-		'copy:libs',
+		['copy:libs','copy:fonts:tmp'],
 		['hbs', 'sass', 'jsHint'],
 		'transpile',
 		['cssLint'],

@@ -2,7 +2,7 @@
   font-family: Parastoo;
   src: url('Parastoo.eot');
   src: url('Parastoo.eot?#iefix') format('embedded-opentype'),
-       url('/boilerplate/app/resources/fonts/Parastoo.woff') format('woff'),
+       url('../fonts/Parastoo.woff') format('woff'),
        url('Parastoo.ttf') format('truetype');
   font-weight: normal;
 }
@@ -11,7 +11,7 @@
   font-family: Parastoo;
   src: url('Parastoo-Bold.eot');
   src: url('Parastoo-Bold.eot?#iefix') format('embedded-opentype'),
-       url('/boilerplate/app/resources/fonts/Parastoo-Bold.woff') format('woff'),
+       url('../fonts/Parastoo-Bold.woff') format('woff'),
        url('Parastoo-Bold.ttf') format('truetype');
   font-weight: bold;
 }

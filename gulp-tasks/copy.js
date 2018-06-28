@@ -31,6 +31,12 @@ gulp.task('copy:img', function() {
 	return stream;
 });
 
+gulp.task('copy:fonts:tmp', function() {
+	var stream = gulp.src('app/resources/fonts/**/*')
+		.pipe(gulp.dest('.tmp/resources/fonts'));
+	return stream;
+});
+
 gulp.task('copy:fonts', function() {
 	var stream = gulp.src('app/resources/fonts/**/*')
 		.pipe(gulp.dest('dist/resources/fonts'));
