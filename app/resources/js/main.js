@@ -16,7 +16,7 @@
 	}
 
 	ready(function() {
-		console.log('DOM\'s ready...');
+		console.log('dom is ready!');
 
 		//initialize navigation
 		const nav = new Navigation({
