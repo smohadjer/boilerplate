@@ -10,7 +10,7 @@
 		<?php include('include/meta.html'); ?>
 		<link rel="icon" href="apple-touch-icon.png">
 		<?php include('include/styles.html'); ?>
-		<link rel="stylesheet" href="../.tmp/resources/css/rtl.css">
+		<?php include('include/styles.rtl.html'); ?>
 	</head>
 	<body>
 		<?php include('include/header.php'); ?>

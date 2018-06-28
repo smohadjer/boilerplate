@@ -31,6 +31,12 @@ gulp.task('copy:img', function() {
 	return stream;
 });
 
+gulp.task('copy:fonts', function() {
+	var stream = gulp.src('app/resources/fonts/**/*')
+		.pipe(gulp.dest('dist/resources/fonts'));
+	return stream;
+});
+
 // copy package.json dependencies to .tmp
 gulp.task('copy:libs', function() {
 	var stream = gulp.src(npmDist({

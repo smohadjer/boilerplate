@@ -22,7 +22,7 @@ gulp.task('serve', ['build:dev'], function(callback) {
 
 gulp.task('build', ['clean:dist', 'build:dev'], function(callback) {
 	runSequence(
-		['copy:assets', 'copy:root', 'copy:content', 'copy:img', 'copy:appleIcon'],
+		['copy:assets', 'copy:root', 'copy:content', 'copy:img', 'copy:fonts', 'copy:appleIcon'],
 		'useref',
 		callback);
 });
