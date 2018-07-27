@@ -16,7 +16,7 @@
 	}
 
 	ready(function() {
-		console.log('DOM\'s ready...');
+		console.log('dom is ready!');
 
 		//initialize navigation
 		const nav = new Navigation({
@@ -42,6 +42,9 @@
 			'title': 'Example of markup generated via js using handlebars',
 			'subtitle': 'This text comes from a hbs partial!'
 		});
-		document.querySelector('body > footer').insertAdjacentHTML('beforebegin', html);
+		var aside = document.querySelector('aside');
+		if (aside) {
+			aside.innerHTML = html;
+		}
 	});
 })();

@@ -1,7 +1,8 @@
 Demo: http://boilerplate.saeidmohadjer.com/
 
 **Features**
- * No dependency on jQuery
+ * Supports Right-to-left languages
+ * No dependency on jQuery or JavaScript frameworks
  * ES6 ready (transpiling via Babel)
  * Supports Sass
  * Validates and minifies CSS and JavaScript resources

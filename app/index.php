@@ -12,10 +12,8 @@
 	</head>
 	<body>
 		<?php include('include/header.php'); ?>
-		<main>
-			<?php include('content/home.html'); ?>
-		</main>
-		<?php include('include/footer.html'); ?>
+		<?php include('content/home.html'); ?>
+		<?php include('include/footer.php'); ?>
 		<?php include('include/scripts.html'); ?>
 	</body>
 </html>
