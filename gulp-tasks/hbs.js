@@ -8,8 +8,8 @@ var fs = require('fs');
 var json = JSON.parse(fs.readFileSync('./project.json'));
 
 //precompile handlebars templates
-gulp.task('hbs', function() {
-	gulp.src('app/resources/hbs/*.hbs')
+gulp.task('hbs', () => {
+	return gulp.src('app/resources/hbs/*.hbs')
 		.pipe(handlebars({
 			handlebars: require('handlebars')
 		}))

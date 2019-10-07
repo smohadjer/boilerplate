@@ -8,13 +8,14 @@
 	},
 	"license": "MIT",
 	"devDependencies": {
-		"babel-core": "^6.26.3",
-		"babel-preset-env": "^1.7.0",
-		"del": "2.2.0",
-		"gulp": "3.9.1",
-		"gulp-babel": "^7.0.1",
-		"gulp-concat": "2.6.0",
-		"gulp-connect": "5.5.0",
+		"@babel/core": "^7.6.2",
+		"@babel/plugin-transform-classes": "^7.5.5",
+		"@babel/preset-env": "^7.6.2",
+		"del": "^3.0.0",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0-beta.2",
+		"gulp-concat": "2.6.1",
+		"gulp-connect": "^5.7.0",
 		"gulp-csslint": "^0.3.0",
 		"gulp-cssnano": "^2.1.0",
 		"gulp-debug": "^4.0.0",
@@ -27,15 +28,14 @@
 		"gulp-sourcemaps": "^2.0.0-alpha",
 		"gulp-uglify": "3.0.0",
 		"gulp-useref": "3.1.5",
-		"gulp-wrap": "0.11.0",
-		"jshint": "^2.9.2",
+		"gulp-wrap": "^0.15.0",
+		"jshint": "^2.10.2",
 		"jshint-stylish": "2.1.0",
-		"require-dir": "^0.3.2",
-		"run-sequence": "2.2.1"
+		"require-dir": "^0.3.2"
 	},
 	"dependencies": {
-		"helpers": "git+https://github.com/smohadjer/helpers.git",
 		"hamburgers": "0.9.3",
-		"handlebars": "4.0.11"
+		"handlebars": "^4.4.2",
+		"helpers": "git+https://github.com/smohadjer/helpers.git"
 	}
 }

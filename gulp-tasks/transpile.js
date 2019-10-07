@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 gulp.task('transpile', function () {
 	var stream = gulp.src('app/resources/js/*.js')
 		.pipe(babel({
-			presets: ['env']
+			presets: ['@babel/preset-env']
 		}))
 		.pipe(gulp.dest('.tmp/resources/js'));
 
