@@ -6,8 +6,6 @@ var gulp = require('gulp'),
 gulp.task('cssLint', function() {
 	return gulp.src('.tmp/resources/css/styles.css')
 		.pipe(csslint())
-		.pipe(csslint.reporter())
-		//.pipe(csslint.reporter('fail'));
 });
 
 gulp.task('jsHint', function() {

@@ -42,9 +42,11 @@
 			'title': 'Example of markup generated via js using handlebars',
 			'subtitle': 'This text comes from a hbs partial!'
 		});
-		var aside = document.querySelector('aside');
+		var aside = document.querySelector('aside') || document.querySelector('.handlebars');
 		if (aside) {
 			aside.innerHTML = html;
+		} else {
+			console.log('aside not found!');
 		}
 	});
 })();
