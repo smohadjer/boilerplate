@@ -10,5 +10,7 @@
     },
     "parserOptions": {
         "sourceType": "module"
-    }
+    },
+    "predef": [ "enquire", "$", "myApp", "Modernizr", "Handlebars", "google", "_gaq", "moment", "Navigation"]
+
 }

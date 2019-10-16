@@ -7,35 +7,37 @@
 		"url": "https://github.com/smohadjer/boilerplate"
 	},
 	"license": "MIT",
+	"scripts": {
+		"clean": "rimraf .tmp/*",
+		"copy:css": "cp node_modules/hamburgers/dist/hamburgers.css .tmp/ && cp node_modules/helpers/dist/helper.css .tmp/",
+		"copy:js": "cp node_modules/handlebars/dist/handlebars.runtime.js .tmp/",
+		"precopy": "npm run clean",
+		"copy": "npm run copy:css && npm run copy:js",
+		"sass": "node-sass app/resources/css/styles.scss .tmp/styles.css",
+		"hbs": "handlebars --namespace myApp.templates app/resources/hbs/helloWorld.hbs --output .tmp/handlebars.templates.js",
+		"serve": "npm run copy && npm run sass && npm run hbs",
+		"build:bundle": "node bundle.js",
+		"rollup": "rollup -c",
+		"prerollup": "npm run clean"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.6.2",
 		"@babel/plugin-transform-classes": "^7.5.5",
 		"@babel/preset-env": "^7.6.2",
+		"copy-node-modules": "^1.1.1",
 		"del": "^3.0.0",
-		"gulp": "^4.0.2",
-		"gulp-babel": "^8.0.0-beta.2",
-		"gulp-concat": "2.6.1",
-		"gulp-connect": "^5.7.0",
-		"gulp-csslint": "^0.3.0",
-		"gulp-cssnano": "^2.1.0",
-		"gulp-debug": "^4.0.0",
-		"gulp-declare": "0.3.0",
-		"gulp-handlebars": "5.0.2",
-		"gulp-if": "^2.0.0",
-		"gulp-jshint": "^2.0.0",
-		"gulp-npm-dist": "1.0.1",
-		"gulp-sass": "3.1.0",
-		"gulp-sourcemaps": "^2.0.0-alpha",
-		"gulp-uglify": "3.0.0",
-		"gulp-useref": "3.1.5",
-		"gulp-wrap": "^0.15.0",
-		"jshint": "^2.10.2",
-		"jshint-stylish": "2.1.0",
-		"require-dir": "^0.3.2"
+		"handlebars": "^4.4.3",
+		"node-sass": "^4.12.0",
+		"require-dir": "^0.3.2",
+		"rimraf": "latest",
+		"rollup": "^1.23.1",
+		"rollup-plugin-babel": "^4.3.3",
+		"rollup-stream": "^1.24.1",
+		"vinyl-buffer": "^1.0.1",
+		"vinyl-source-stream": "^2.0.0"
 	},
 	"dependencies": {
 		"hamburgers": "0.9.3",
-		"handlebars": "^4.4.2",
 		"helpers": "git+https://github.com/smohadjer/helpers.git"
 	}
 }
