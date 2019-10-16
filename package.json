@@ -13,9 +13,10 @@
 		"copy:js": "cp node_modules/handlebars/dist/handlebars.runtime.js .tmp/",
 		"precopy": "npm run clean",
 		"copy": "npm run copy:css && npm run copy:js",
-		"sass": "node-sass app/resources/css/styles.scss .tmp/styles.css",
-		"hbs": "handlebars --namespace myApp.templates app/resources/hbs/helloWorld.hbs --output .tmp/handlebars.templates.js",
-		"serve": "npm run copy && npm run sass && npm run hbs",
+		"sass": "node-sass app/resources/css -o .tmp",
+		"sass:watch": "npm run sass && node-sass app/resources/css -wo .tmp",
+		"hbs": "handlebars --namespace myApp.templates app/resources/hbs/*.handlebars -f .tmp/handlebars.templates.js",
+		"serve": "npm run copy && npm run sass && npm run hbs && npm run sass:watch",
 		"build:bundle": "node bundle.js",
 		"rollup": "rollup -c",
 		"prerollup": "npm run clean"
