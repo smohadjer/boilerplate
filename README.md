@@ -1,19 +1,18 @@
 Demo: http://boilerplate.saeidmohadjer.com/
 
 **Features**
- * Supports Right-to-left languages
- * No dependency on jQuery or JavaScript frameworks
- * ES6 ready (transpiling via Babel)
+ * No need for task runners such as gulp or grunt.
+ * No dependency on any CSS or JavaScript framework
+ * Full support of ES6 syntax and features (transpiling and module bundling via Babel and Rollup)
  * Supports Sass
- * Validates and minifies CSS and JavaScript resources
- * Precompiles Handlebars templates
+ * Supports templating via Handlebars (precompiles Handlebars templates)
  * Auto deployment of site content (not code) from git repo to production server
-
-**Usage**
- * Clone repo and run: npm install
- * Run: gulp serve
- * Run: gulp build 
 
  **Requirements**
  * PHP/Apache on production/development server
- * Nodejs on development server
+ * Nodejs and npm on development server for build process
+
+ **Usage**
+  * Clone repo and run "npm install" in command line.
+  * Run: npm run start
+  * build: npm run build
