@@ -8,7 +8,7 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"clean": "rimraf .tmp/*",
+		"clean": "rimraf .tmp && mkdir .tmp",
 		"copy:css": "cp node_modules/hamburgers/dist/hamburgers.css .tmp/ && cp node_modules/helpers/dist/helper.css .tmp/",
 		"copy:js": "cp node_modules/handlebars/dist/handlebars.runtime.js .tmp/",
 		"precopy": "npm run clean",
@@ -16,7 +16,7 @@
 		"sass": "node-sass app/resources/css -o .tmp",
 		"sass:watch": "npm run sass && node-sass app/resources/css -wo .tmp",
 		"hbs": "handlebars --namespace myApp.templates app/resources/hbs/*.handlebars -f .tmp/handlebars.templates.js",
-		"start": "mkdir .tmp && npm run copy && npm run sass && npm run hbs && npm run sass:watch",
+		"start": "npm run copy && npm run sass && npm run hbs && npm run sass:watch",
 		"build:bundle": "node bundle.js",
 		"rollup": "rollup -c",
 		"prerollup": "npm run clean"

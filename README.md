@@ -9,7 +9,7 @@ Demo: http://boilerplate.saeidmohadjer.com/
  * Auto deployment of site content (not code) from git repo to production server
 
  **Requirements**
- * PHP/Apache on production/development server
+ * Local server capable of serving HTML file
  * Nodejs and npm on development server for build process
 
  **Usage**
