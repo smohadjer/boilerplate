@@ -1,5 +1,6 @@
 <?php
 	$pageId = 'two-columns';
+	$rtl = "";
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
