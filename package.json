@@ -16,7 +16,7 @@
 		"sass": "node-sass app/resources/css -o .tmp",
 		"sass:watch": "npm run sass && node-sass app/resources/css -wo .tmp",
 		"hbs": "handlebars --namespace myApp.templates app/resources/hbs/*.handlebars -f .tmp/handlebars.templates.js",
-		"serve": "npm run copy && npm run sass && npm run hbs && npm run sass:watch",
+		"start": "mkdir .tmp && npm run copy && npm run sass && npm run hbs && npm run sass:watch",
 		"build:bundle": "node bundle.js",
 		"rollup": "rollup -c",
 		"prerollup": "npm run clean"
