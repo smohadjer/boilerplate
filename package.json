@@ -8,19 +8,17 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"clean": "npm run removeFolders && npm run addFolders",
-		"removeFolders": "rimraf app/resources/css/vendor & rimraf app/resources/js/vendor & rimraf .tmp & rimraf dist",
-		"addFolders": "mkdir app/resources/css/vendor & mkdir app/resources/js/vendor & mkdir .tmp & mkdir dist",
-		"copy:css": "cp node_modules/hamburgers/dist/hamburgers.css app/resources/css/vendor/ && cp node_modules/helpers/dist/helper.css app/resources/css/vendor/",
-		"copy:js": "cp node_modules/handlebars/dist/handlebars.runtime.js app/resources/js/vendor/",
+		"clean": "node bin/clean.js ",
+		"copy:css": "cp node_modules/hamburgers/dist/hamburgers.css .tmp/resources/css/vendor/ && cp node_modules/helpers/dist/helper.css .tmp/resources/css/vendor/",
+		"copy:js": "cp node_modules/handlebars/dist/handlebars.runtime.js .tmp/resources/js/vendor/",
 		"precopy": "npm run clean",
 		"copy": "npm run copy:css & npm run copy:js",
-		"sass": "node-sass app/resources/css -o .tmp",
-		"hbs": "handlebars --namespace myApp.templates app/resources/hbs/*.handlebars -f .tmp/handlebars.templates.js",
-		"start": "npm run copy && npm run sass && npm run hbs && node bin/watch.js",
-		"build:bundle": "node bin/bundle.js",
-		"rollup": "rollup -c",
-		"prerollup": "npm run clean"
+		"sass": "node-sass app/resources/css -o .tmp/resources/css",
+		"hbs": "handlebars --namespace myApp.templates app/resources/hbs/*.handlebars -f .tmp/resources/js/handlebars.templates.js",
+		"watch": "node bin/watch.js",
+		"serve": "npm run copy && npm run sass && npm run hbs && rollup -c -w",
+		"start": "npm run serve && npm run watch",
+		"build": "npm run serve"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.6.2",
@@ -29,14 +27,14 @@
 		"handlebars": "^4.4.3",
 		"node-sass": "^4.12.0",
 		"rimraf": "latest",
-		"rollup": "^1.23.1",
-		"rollup-plugin-babel": "^4.3.3",
-		"rollup-stream": "^1.24.1",
-		"vinyl-buffer": "^1.0.1",
-		"vinyl-source-stream": "^2.0.0"
+		"rollup": "^1.25.1",
+		"rollup-plugin-babel": "^4.3.3"
 	},
 	"dependencies": {
 		"hamburgers": "0.9.3",
 		"helpers": "git+https://github.com/smohadjer/helpers.git"
+	},
+	"engines": {
+		"node": ">=0.16.3"
 	}
 }

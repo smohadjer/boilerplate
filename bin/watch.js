@@ -10,7 +10,7 @@ fs.watch('./app/resources/css', { recursive: true }, (eventType, filename) => {
 		}, function(err, result) {
 			if(!err) {
 					// No errors during the compilation, write this result on the disk
-					fs.writeFile('./.tmp/styles.css', result.css, function(err){
+					fs.writeFile('./.tmp/resources/css/styles.css', result.css, function(err){
 					if(!err){
 					  //file written on disk
 					}
