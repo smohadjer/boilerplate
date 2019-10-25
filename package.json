@@ -8,11 +8,8 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"clean": "node bin/clean.js ",
-		"copy:css": "cp node_modules/hamburgers/dist/hamburgers.css .tmp/resources/css/vendor/ && cp node_modules/helpers/dist/helper.css .tmp/resources/css/vendor/",
-		"copy:js": "cp node_modules/handlebars/dist/handlebars.runtime.js .tmp/resources/js/vendor/",
-		"precopy": "npm run clean",
-		"copy": "npm run copy:css & npm run copy:js",
+		"precopy": "node bin/clean.js",
+		"copy": "node bin/copytmp.js",
 		"sass": "node-sass app/resources/css -o .tmp/resources/css",
 		"hbs": "handlebars --namespace myApp.templates app/resources/hbs/*.handlebars -f .tmp/resources/js/handlebars.templates.js",
 		"watch": "node bin/watch-css.js",
