@@ -5,10 +5,11 @@
 		<title>Boilerplate for responsive Websites</title>
 		<meta name="description" content="Boilerplate for responsvie Websites">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" href="apple-touch-icon.png">
+		<!-- build:css resources/css/styles.min.css -->
 		<link rel="stylesheet" href="../.tmp/resources/css/vendor/helper.css">
 		<link rel="stylesheet" href="../.tmp/resources/css/vendor/hamburgers.css">
 		<link rel="stylesheet" href="../.tmp/resources/css/styles.css">
+		<!-- endbuild -->
 	</head>
 	<body>
 		<header>
@@ -59,9 +60,10 @@
 		<script>
 			var myApp = {};
 		</script>
+		<!-- build:js resources/js/bundle.js -->
 		<script src="../.tmp/resources/js/vendor/handlebars.runtime.js"></script>
 		<script src="../.tmp/resources/js/handlebars.templates.js"></script>
-		<!--<script type="module" src="resources/js/main.js"></script>-->
-		<script src="../.tmp/resources/js/main.js"></script>
+		<script type="module" src="resources/js/main.js"></script>
+		<!-- endbuild -->
 	</body>
 </html>
