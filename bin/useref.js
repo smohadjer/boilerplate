@@ -10,14 +10,23 @@ function fread(f) {
   return fs.readFileSync(f, { encoding: 'utf-8'});
 }
 
-var html = fread(djoin('../app/index.html'));
-var result = useref(html);
+function writeToFile(result, file) {
+	fs.writeFile('dist/' + file, result[0], function(err) {
+		if(err) {
+			return console.log(err);
+		}
+		console.log(file + ' was saved!');
+	});
+}
 
-console.log(result[1].js);
+var files = fs.readdirSync('./app');
+var targetFiles = files.filter(function(file) {
+	return path.extname(file).toLowerCase() === '.html' || path.extname(file).toLowerCase() === '.php';
+});
 
-fs.writeFile("dist/index.html", result[0], function(err) {
-    if(err) {
-        return console.log(err);
-    }
-    console.log("The file was saved!");
+targetFiles.forEach(function(file) {
+	var html = fread(djoin('../app/' + file));
+	var result = useref(html);
+	//console.log(result[1].js);
+	writeToFile(result, file);
 });

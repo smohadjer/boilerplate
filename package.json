@@ -34,6 +34,6 @@
 		"helpers": "git+https://github.com/smohadjer/helpers.git"
 	},
 	"engines": {
-		"node": ">=0.16.3"
+		"node": ">=10.16.3"
 	}
 }

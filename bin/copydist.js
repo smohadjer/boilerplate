@@ -19,3 +19,11 @@ fs.copy('app/assets', 'dist/assets', function (err) {
     }
     console.log('Copy completed!')
 });
+
+fs.copy('app/includes', 'dist/includes', function (err) {
+    if (err){
+        console.log('An error occured while copying the folder.')
+        return console.error(err)
+    }
+    console.log('Copy completed!')
+});
