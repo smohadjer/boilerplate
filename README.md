@@ -1,18 +1,20 @@
 Demo: http://boilerplate.saeidmohadjer.com/
 
+## A minimal boilerplate for building modern Websites
+
 **Features**
- * No need for task runners such as gulp or grunt.
- * No dependency on any CSS or JavaScript framework
- * Full support of ES6 syntax and features (transpiling and module bundling via Babel and Rollup)
- * Supports Sass
- * Supports templating via Handlebars (precompiles Handlebars templates)
- * Auto deployment of site content (not code) from git repo to production server
+* No need for task runners such as Gulp or Grunt.
+* No dependency on any CSS or JavaScript framework
+* Full support of ES6 features including ES6 modules (transpiling and bundling via Babel and Rollup)
+* Watches and compiles Sass files
+* Supports and precompiles Handlebars templates
+* Auto deployment from git repository to production server
 
- **Requirements**
- * Local server capable of serving HTML file
- * Nodejs and npm on development server for build process
+**Requirements**
+* Local server capable of serving HTML or PHP files
+* Nodejs and npm on development server
 
- **Usage**
-  * Clone repo and run "npm install" in command line.
-  * Run: npm run start
-  * build: npm run build
+**Usage**
+* Clone repo and run "npm install" from command line.
+* Run: "npm start" to serve files from local server
+* Run: "npm run build" to build project into the "dist" folder
