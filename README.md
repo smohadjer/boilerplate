@@ -5,14 +5,14 @@ Demo: http://boilerplate.saeidmohadjer.com/
 **Features**
 * No need for task runners such as Gulp or Grunt.
 * No dependency on any CSS or JavaScript framework
-* Full support of ES6 features including ES6 modules (transpiling and bundling via Babel and Rollup)
-* Watches and compiles Sass files
-* Supports and precompiles Handlebars templates
-* Auto deployment from git repository to production server
+* Full support of ES6 features including ES6 modules (transpiling via Babel, bundling via Rollup)
+* Watching and compiling of Sass files
+* Support and precompiling of Handlebars templates
+* Concatenating JavaScript and CSS files for production
 
 **Requirements**
 * Local server capable of serving HTML or PHP files
-* Nodejs and npm on development server
+* Nodejs and npm installed on local server
 
 **Usage**
 * Clone repo and run "npm install" from command line.
