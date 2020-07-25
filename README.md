@@ -9,6 +9,7 @@ Demo: http://boilerplate.saeidmohadjer.com/
 * Watching and compiling of Sass files
 * Support and precompiling of Handlebars templates
 * Concatenating JavaScript and CSS files for production
+* Automated deployment to production server (Optional)
 
 **Requirements**
 * Local server capable of serving HTML or PHP files
@@ -16,5 +17,5 @@ Demo: http://boilerplate.saeidmohadjer.com/
 
 **Usage**
 * Clone repo and run "npm install" from command line.
-* Run: "npm start" to serve files from local server
+* Run: "npm run start" to serve files from local server
 * Run: "npm run build" to build project into the "dist" folder
