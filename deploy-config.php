@@ -73,12 +73,13 @@ define('DELETE_FILES', false);
 /* excluding everything except app/content folder */
 define('EXCLUDE', serialize(array(
 	'/.*',
-    '/bin',
+	'/bin',
 	'/*.json',
 	'/*.md',
-    '/*.js',
+	'/*.js',
+	'/*.php',
 	'app/resrouces',
-    'app/.htaccess',
+	'app/.htaccess',
 	'app/*.php'
 )));
 
