@@ -70,15 +70,16 @@ define('DELETE_FILES', false);
  *
  * @var serialized array of strings
  */
+/* excluding everything except app/content folder */
 define('EXCLUDE', serialize(array(
-	'.*',
-    'bin',
-	'*.json',
-    '*.php',
-	'*.md',
-    '*.js',
+	'/.*',
+    '/bin',
+	'/*.json',
+	'/*.md',
+    '/*.js',
 	'app/resrouces',
     'app/.htaccess',
+	'app/*.php'
 )));
 
 /**
