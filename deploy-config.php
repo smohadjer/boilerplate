@@ -60,7 +60,7 @@ define('TARGET_DIR', '/var/www/vhosts/saeidmohadjer.com/boilerplate.saeidmohadje
  *
  * @var boolean
  */
-define('DELETE_FILES', false);
+define('DELETE_FILES', true);
 
 /**
  * The directories and files that are to be excluded when updating the code.
