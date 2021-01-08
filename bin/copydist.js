@@ -9,8 +9,8 @@ fs.mkdir('dist/resources/js', { recursive: true }, (err) => {
 	if (err) throw err;
 });
 
-concat('.tmp/resources/css', 'dist/resources/css/styles.min.css');
-concat('.tmp/resources/js', 'dist/resources/js/bundle.js');
+concat('app/.tmp/resources/css', 'dist/resources/css/styles.min.css');
+concat('app/.tmp/resources/js', 'dist/resources/js/bundle.js');
 
 copyFile('app/apple-touch-icon.png', 'dist/apple-touch-icon.png');
 copyFile('app/.htaccess', 'dist/.htaccess');

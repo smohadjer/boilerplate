@@ -6,7 +6,7 @@ var jsonContent = JSON.parse(content);
 function copyDependencies(type) {
 	jsonContent.dependencies[type].forEach(function(source) {
 		var filename = path.basename(source);
-		var destination = `.tmp/resources/${type}/${filename}`;
+		var destination = `app/.tmp/resources/${type}/${filename}`;
 
 		fs.copy(source, destination, function (err) {
 		    if (err){

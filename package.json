@@ -10,8 +10,8 @@
 	"scripts": {
 		"precopy": "node bin/clean.js",
 		"copy": "node bin/copytmp.js",
-		"sass": "node-sass app/resources/css -o .tmp/resources/css",
-		"hbs": "handlebars -e hbs -n myApp.templates app/resources/hbs -f ./.tmp/resources/js/handlebars.templates.js",
+		"sass": "node-sass app/resources/css -o app/.tmp/resources/css",
+		"hbs": "handlebars -e hbs -n myApp.templates app/resources/hbs -f app/.tmp/resources/js/handlebars.templates.js",
 		"watch": "node bin/watch-css.js",
 		"serve": "npm run copy && npm run sass && npm run hbs",
 		"start": "npm run serve && npm run watch",
