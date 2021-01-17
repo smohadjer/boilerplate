@@ -27,7 +27,7 @@
 				    <li><a href="javascript:void(0);">Consectetur</a></li>
 				    <li><a href="javascript:void(0);">Duis aute</a></li>
 				    <li><a href="javascript:void(0);">Proident</a></li>
-				    <li><a href="javascript:void(0);">Last item in navigation</a></li>
+				    <li class="github"><a href="https://github.com/smohadjer/boilerplate">GitHub</a></li>
 				</ul>
 			</nav>
 		</header>

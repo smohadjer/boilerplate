@@ -45,6 +45,13 @@ nav {
 					margin-left: 0;
 				}
 			}
+
+			&.github a {
+				background: url(../img/GitHub-Mark-64px.png) no-repeat;
+				background-size: contain;
+				padding-left: 24px;
+
+			}
 		}
 	}
 }
