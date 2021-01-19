@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Boilerplate for responsive Websites</title>
+		<title>Boilerplate</title>
 		<meta name="description" content="Boilerplate for responsvie Websites">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- build:css resources/css/styles.min.css -->
@@ -12,29 +12,11 @@
 		<!-- endbuild -->
 	</head>
 	<body>
-		<header>
-			<a class="logo" href="javascript:void(0);">Logo</a>
-			<button class="hamburger hamburger--spin" type="button">
-				<span class="hamburger-box">
-					<span class="hamburger-inner"></span>
-				</span>
-				<span class="hamburger-label">Menu</span>
-			</button>
-			<nav data-set-max-height="true">
-				<ul>
-				    <li><a href="javascript:void(0);">Home</a></li>
-				    <li><a href="javascript:void(0);">Lorem ipsum</a></li>
-				    <li><a href="javascript:void(0);">Consectetur</a></li>
-				    <li><a href="javascript:void(0);">Duis aute</a></li>
-				    <li><a href="javascript:void(0);">Proident</a></li>
-				    <li class="github"><a href="https://github.com/smohadjer/boilerplate">GitHub</a></li>
-				</ul>
-			</nav>
-		</header>
+		<?php include('content/html/header.html'); ?>
 		<main>
 			<?php include('content/html/index.html'); ?>
 		</main>
-		<footer>Copyright 2020</footer>
+		<?php include('content/html/footer.html'); ?>
 		<script>
 			var myApp = {};
 		</script>
