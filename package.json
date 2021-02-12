@@ -12,9 +12,9 @@
 		"copy": "node bin/copytmp.js",
 		"sass": "node-sass app/resources/css -o app/.tmp/resources/css",
 		"hbs": "node bin/hbs.js",
-		"watch": "node bin/watch-css.js",
+		"watch": "node bin/watch-css.js & node bin/watch-img.js ",
 		"serve": "npm run copy && npm run sass && npm run hbs",
-		"start": "npm run serve && npm run watch",
+		"start": "npm run serve & npm run watch",
 		"build": "npm run serve && rollup -c && node bin/copydist.js && node bin/useref.js"
 	},
 	"devDependencies": {
@@ -27,7 +27,8 @@
 		"rimraf": "latest",
 		"rollup": "^1.25.1",
 		"rollup-plugin-babel": "^4.3.3",
-		"useref": "^1.4.2"
+		"useref": "^1.4.2",
+		"chokidar": "3.5.1"
 	},
 	"dependencies": {
 		"hamburgers": "0.9.3",
