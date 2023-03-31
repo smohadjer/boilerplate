@@ -1,0 +1,58 @@
+<main>
+  <article>
+    <header class="stage stage--text-image">
+      <div>
+        <img class="responsive object-fit-cover"
+          srcset="/assets/mobile/home.webp 1024w,
+                  /assets/home.webp 2400w"
+          sizes="(max-width: 1023px) 100vw,
+                  100vw"
+          src="/assets/home.webp"
+          width="1024"
+          height="683"
+          alt="" />
+      </div>
+      <h1>Hello World</h1>
+    </header>
+    <h2>Headline (h2) Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta tempora, porro repellat earum recusandae repellendus assumenda eligendi ipsum eaque sint dignissimos quaerat quidem amet eveniet, reiciendis ullam veniam, tempore corrupti</h2>
+    <h3>Headline (h3) Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga omnis veniam soluta reprehenderit minus repudiandae nobis iusto facilis? Aliquam unde atque esse veniam quis nulla in voluptatum incidunt commodi fugiat.</h3>
+    <h4>Headline (h4) Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur iure corporis asperiores, eligendi aperiam amet quam facere deleniti in ea repellendus eveniet dolorum sequi officia qui ducimus. Ex, quos nostrum.</h4>
+    <p>Example of a paragraph which <a href="https://saeidmohadjer.com">contains a link</a> and some <b>bold text</b> and some <i>italic text</i>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ea cum explicabo? Rerum id commodi laborum sequi ipsam quis officiis reiciendis est corporis, error repellendus fuga cupiditate autem facere adipisci.</p>
+    <p>Example of an <a href="https://saeidmohadjer.com" class="external" target="_blank">external link</a> opening in a new tab/window.</p>
+    <h4>Unordered List</h4>
+    <ul>
+      <li>First list item</li>
+      <li>Second list item long so it can wrap Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum magnam eveniet autem iure doloribus! Eius asperiores eveniet inventore mollitia perspiciatis quidem.</li>
+      <li>Third list item</li>
+    </ul>
+    <h4>Ordered List</h4>
+    <ol>
+      <li>First list item</li>
+      <li>Second list item long so it can wrap Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum magnam eveniet autem iure doloribus! Eius asperiores eveniet inventore mollitia perspiciatis quidem.</li>
+      <li>Third list item</li>
+    </ol>
+    <h4>Definition List</h4>
+    <dl>
+      <dt>Title for the first item</dt>
+      <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, veniam! At, molestias maiores placeat aspernatur, explicabo fuga quas officiis labore voluptatum quia consectetur ex sed animi ad, ducimus est. Ex.</dd>
+      <dt>Title for the second item</dt>
+      <dd>Doloremque, explicabo corrupti iusto porro illum ut sequi maiores eligendi blanditiis exercitationem suscipit voluptatum quam, ipsum quas molestias culpa reiciendis quis? Doloremque?</dd>
+    </dl>
+    <h4>Accordion</h4>
+    {{> partials/accordion }}
+    <h4>A responsive image via srcset attribute</h4>
+    <figure>
+        <img class="responsive" srcset="/assets/1.webp 1920w,
+                     /assets/mobile/1.webp 1200w"
+             sizes="100vw"
+             src="/assets/mobile/1.webp"
+             width="1200"
+             height="800"
+             alt="" />
+        <figcaption>Example of caption...</figcaption>
+    </figure>
+    <div class="handlebars">
+        <!-- content is inserted via js -->
+    </div>
+  </article>
+</main>

@@ -1,0 +1,25 @@
+<ul>
+  <li>{{#if (eq pageId 'index')}}<span>Home</span>{{else}}<a href="/index.html">Home</a>{{/if}}</li>
+  <li>{{#if (eq pageId 'about')}}<span>About</span>{{else}}<a href="/about.html">About</a>{{/if}}</li>
+  <li class="has-list {{#if (or
+        (eq pageId 'products/overview')
+        (eq pageId 'products/product-detail')
+        (eq pageId 'products/product-listing')
+      )}}selected{{/if}}"><a href="javascript:void(0);">Products</a>
+    <ul>
+      <li>{{#if (eq pageId 'products/overview')}}<span>Overview</span>{{else}}<a href="/products/overview.html">Overview</a>{{/if}}</li>
+      <li>{{#if (eq pageId 'products/product-detail')}}<span>Products Details</span>{{else}}<a href="/products/product-detail.html">Details</a>{{/if}}</li>
+      <li>{{#if (eq pageId 'products/product-listing')}}<span>Products Listing Lorem Ipsum</span>{{else}}<a href="/products/product-listing.html">Products Listing Lorem Ipsum</a>{{/if}}</li>
+    </ul>
+  </li>
+  <li class="has-list {{#if (or
+    (eq pageId 'contact')
+    (eq pageId 'test')
+  )}}selected{{/if}}"><a href="javascript:void(0);">Contact</a>
+    <ul>
+      <li>{{#if (eq pageId 'contact')}}<span>Contact</span>{{else}}<a href="/contact.html">Contact</a>{{/if}}</li>
+      <li>{{#if (eq pageId 'test')}}<span>Lorem Ipsum Blah Blah</span>{{else}}<a href="javascript:void(0);">Lorem Ipsum Blah Blah</a>{{/if}}</li>
+    </ul>
+  </li>
+</ul>
+
