@@ -19,7 +19,7 @@
 		"server": "node node_modules/build/bin/server.js",
 		"serve": "npm run compile && npm run copy && npm run tsc && npm run sass && npm run hbs",
 		"start": "npm run serve && npm run watch & tsc -w & npm run server -- public 5000",
-		"build": "npm run start",
+		"build": "npm run serve",
 		"start-prod": "npm run build && npm run server -- dist 3001"
 	},
 	"devDependencies": {
