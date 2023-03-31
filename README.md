@@ -5,10 +5,14 @@
 The Website is a static HTML site hosted on GitHub Pages for free via a custom domain. On every commit to GitHub, GitHub actions builds and deploys the static site to GitHub Pages.
 
 ## Running Website locally
-- git clone https://github.com/smohadjer/boilerplate.git
-- cd boilerplate
-- npm install
-- npm start
+````
+git clone https://github.com/smohadjer/boilerplate.git
+cd boilerplate
+npm install
+npm start
+vercel dev
+````
+Open Website at: http://localhost:3000
 
 ## Favicon and touch icons
 Use https://redketchup.io/favicon-generator to generate and add favicons and shortcut icons for touch devices. Select `Generate the favicon from text`, use `Open Sans` as font, set font-size to 100 and bold and colors matching color scheme of website you are building. If you wish to use round corner note that Apple doesn't allow it in touch icons, so you need later to replace Apple touch icon with a one without a round courner. Download zip, unzip folder and copy/paste files to root of the website. These files will be copied to dist folder during build. You also need to add below snippet to heard of your pages:

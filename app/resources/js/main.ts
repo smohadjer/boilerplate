@@ -23,7 +23,7 @@ function ready(fn) {
 ready(function() {
 	'use strict';
 
-	console.log('DOM is readyyyy!');
+	console.log('DOM is ready!');
 
 	//initialize navigation
 	const navigation = new Navigation({
