@@ -48,6 +48,7 @@ ready(function() {
 		'title': 'Example of markup generated via js using handlebars',
 		'subtitle': 'This text comes from a hbs partial!'
 	});
+
 	var aside = document.querySelector('aside') || document.querySelector('.handlebars');
 
 	if (aside) {

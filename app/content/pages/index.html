@@ -1,49 +1,51 @@
 <main>
-  {{> partials/stage image="home" }}
+  {{> partials/stage image="tennis.jpg" }}
   <article>
-    <h1>Headline (h1) hosted on Vercel</h1>
-    <h2>Headline (h2) Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta tempora, porro repellat earum recusandae repellendus assumenda eligendi ipsum eaque sint dignissimos quaerat quidem amet eveniet, reiciendis ullam veniam, tempore corrupti</h2>
-    <h3>Headline (h3) Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga omnis veniam soluta reprehenderit minus repudiandae nobis iusto facilis? Aliquam unde atque esse veniam quis nulla in voluptatum incidunt commodi fugiat.</h3>
-    <h4>Headline (h4) Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur iure corporis asperiores, eligendi aperiam amet quam facere deleniti in ea repellendus eveniet dolorum sequi officia qui ducimus. Ex, quos nostrum.</h4>
-    <p>Example of a paragraph which contains an <a href="#footer">internal link to footer</a> and some <b>bold text</b> and some <i>italic text</i>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ea cum explicabo? Rerum id commodi laborum sequi ipsam quis officiis reiciendis est corporis, error repellendus fuga cupiditate autem facere adipisci.</p>
-    <p>Example of an <a href="https://saeidmohadjer.com" class="external" target="_blank">external link</a> opening in a new tab/window.</p>
-    <h4>Unordered List</h4>
+    <h1>Hello, I'm a h1 headline!</h1>
+    <h2>And I'm a h2 headline. I'm not as strong as my bigger brother h1, so please use me for anything that is less important than him or he will beat the shit out of me! &#128521;</h2>
+    <h3>I'm h3, less important than h2, but still more important than h4! You can use me for text that is longer than a headline such as leading text for an article.</h3>
+    <h4>I'm the least important headline in this boilerplate. I'm the same size as normal text, but a tad bolder so I'm best to be used to draw attention to words or phrases in a paragraph.</h4>
+    <p>Example of a paragraph which contains a <a href="#footer">link to footer</a> which once clicked should scroll the page to footer. You can use <b>bold text</b> and <i>italic text</i> in a pragraph too. And here some meaningless text so you can better judge how I look when I wrap into other lines. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ea cum explicabo? Rerum id commodi laborum sequi ipsam quis officiis reiciendis est corporis, error repellendus fuga cupiditate autem facere adipisci.</p>
+    <p>Example of an <a href="https://saeidmohadjer.com" class="external" target="_blank">external link</a> opening in a new browser tab or window. You should avoid using me as on phones opening a link in a new tab can be confusing for users. </p>
+    <h3>Unordered List</h3>
     <ul>
       <li>First list item long so it can wrap Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum magnam eveniet autem iure doloribus! Eius asperiores eveniet inventore mollitia perspiciatis quidem.</li>
       <li>Second list item long so it can wrap Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum magnam eveniet autem iure doloribus! Eius asperiores eveniet inventore mollitia perspiciatis quidem.</li>
       <li>Third list item</li>
       <li>Last list item long so it can wrap Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum magnam eveniet autem iure doloribus! Eius asperiores eveniet inventore mollitia perspiciatis quidem.</li>
     </ul>
-    <h4>Ordered List</h4>
+    <h3>Ordered List</h3>
     <ol>
       <li>First list item long so it can wrap Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum magnam eveniet autem iure doloribus! Eius asperiores eveniet inventore mollitia perspiciatis quidem.</li>
       <li>Second list item long so it can wrap Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum magnam eveniet autem iure doloribus! Eius asperiores eveniet inventore mollitia perspiciatis quidem.</li>
       <li>Third list item</li>
       <li>Last list item long so it can wrap Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum magnam eveniet autem iure doloribus! Eius asperiores eveniet inventore mollitia perspiciatis quidem.</li>
     </ol>
-    <h4>Definition List</h4>
+    <h3>Definition List</h3>
     <dl>
       <dt>Title for the first item</dt>
       <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, veniam! At, molestias maiores placeat aspernatur, explicabo fuga quas officiis labore voluptatum quia consectetur ex sed animi ad, ducimus est. Ex.</dd>
       <dt>Title for the second item</dt>
       <dd>Doloremque, explicabo corrupti iusto porro illum ut sequi maiores eligendi blanditiis exercitationem suscipit voluptatum quam, ipsum quas molestias culpa reiciendis quis? Doloremque?</dd>
     </dl>
-    <h4>Accordion</h4>
+    <h3>Accordion</h3>
     {{> partials/accordion }}
-    <h4>A responsive image that doesn't grow beyond it's native size. Use for small content images that should not get blurred on large screens due to scaling up.</h4>
+
+    <p>A responsive image that doesn't grow beyond it's native size. Use for small content images that should not get blurred on large screens due to scaling up.</p>
     <img class="responsive responsive--below-intrinsic-width" src="/assets/tennis-640.jpg" alt="tennis">
 
     <h4>A responsive image via srcset attribute</h4>
     <figure>
-        <img class="responsive" srcset="/assets/1.webp 1920w,
-                     /assets/mobile/1.webp 1200w"
+        <img class="responsive"
+             srcset="/assets/tennis.jpg 1920w, /assets/mobile/tennis.jpg 640w"
              sizes="100vw"
-             src="/assets/mobile/1.webp"
-             width="1200"
-             height="800"
-             alt="" />
+             src="/assets/mobile/tennis.jpg"
+             width="640"
+             height="386"
+             alt="tennis" />
         <figcaption>Example of caption...</figcaption>
     </figure>
+
     <div class="handlebars">
         <!-- content is inserted via js -->
     </div>

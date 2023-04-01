@@ -40,10 +40,34 @@ footer {
         display: inline-block;
         margin-right: 15px;
 
+				&.html5 {
+					background: url(../img/html5-color.svg) left center no-repeat;
+				}
+
+				&.css3 {
+					background: url(../img/css3-color.svg) left center no-repeat;
+				}
+
+				&.a11y {
+					background: url(../img/a11y.svg) left center no-repeat;
+				}
+
+				&.performance {
+					background: url(../img/performance.svg) left center no-repeat;
+				}
+
         &:last-child {
           margin-right: 0;
         }
       }
+
+			&.tools {
+				li {
+					background-size: 20px;
+					padding-left: 24px;
+					display: block;
+				}
+			}
     }
 	}
 }
