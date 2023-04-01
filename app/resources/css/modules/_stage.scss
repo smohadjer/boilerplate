@@ -1,7 +1,11 @@
 
 .stage {
-  height: 60vh;
+  height: 40vh;
   background: #ccc;
+
+  @media (min-width: 1024px) {
+    height: 60vh;
+  }
 
   img {
     object-fit: cover;
