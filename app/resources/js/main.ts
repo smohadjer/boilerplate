@@ -1,4 +1,4 @@
-import Navigation from './modules/nav.js';
+import SiteNav from './modules/nav.js';
 import Accordion from './modules/accordion.js';
 
 declare var Handlebars: any;
@@ -22,11 +22,13 @@ function ready(fn) {
 
 ready(function() {
 	'use strict';
-
 	console.log('DOM is ready!');
 
-	//initialize navigation
-	const navigation = new Navigation({
+	// custom event for use in other scripts
+	document.dispatchEvent(new Event('domReady'));
+
+	//initialize site navigation
+	const navigation = new SiteNav({
 		element: document.querySelector('header > nav')
 	});
 
