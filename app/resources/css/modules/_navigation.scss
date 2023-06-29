@@ -84,8 +84,14 @@ nav {
           }
         }
 
-        > a {
+        > span {
           display: inline-block;
+          color: $blue;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
         &.expanded ul {
