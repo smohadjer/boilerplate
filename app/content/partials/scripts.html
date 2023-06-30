@@ -27,24 +27,8 @@ if (swiperElm) {
 </script>
 {{/if}}
 
-{{#if (eq pageId 'about')}}
-<script src="/resources/js/glider.min.js"></script>
-<script type="module">
-    new Glider(document.querySelector('.glider'), {
-      slidesToShow: 1,
-      dots: '#dots',
-      draggable: true,
-      scrollLock: true,
-      arrows: {
-        prev: '.glider-prev',
-        next: '.glider-next'
-      }
-    });
-</script>
-{{/if}}
-
 <script type="module">
   document.addEventListener('domReady', () => {
-    console.log()
+    console.log('ready')
   });
 </script>
