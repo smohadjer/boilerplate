@@ -1,14 +1,5 @@
-interface Accordion {
-  el: HTMLDetailsElement;
-  summary: HTMLElement;
-  content: HTMLElement;
-  animation: Animation;
-  isClosing: boolean;
-  isExpanding: boolean;
-}
-
 class Accordion {
-  constructor(el: HTMLDetailsElement) {
+  constructor(el) {
     // Store the <details> element
     this.el = el;
     // Store the <summary> element

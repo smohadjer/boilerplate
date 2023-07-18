@@ -1,9 +1,6 @@
 import SiteNav from './modules/nav.js';
 import Accordion from './modules/accordion.js';
 
-declare var Handlebars: any;
-declare var myApp: any;
-
 //Helper classes to HTML for styling of nojs version
 const html = document.querySelector('html');
 html.classList.remove('no-js');
@@ -60,7 +57,7 @@ ready(function() {
 	}
 
 	//initialize accordions
-	document.querySelectorAll('.accordion').forEach((el: HTMLDetailsElement) => {
+	document.querySelectorAll('.accordion').forEach((el) => {
 		new Accordion(el);
 	});
 });
