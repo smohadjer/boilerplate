@@ -1,0 +1,14 @@
+<!-- {{this.pageId}} -->
+<!doctype html>
+<html class="no-js" lang="de">
+	<head>
+    {{> de/partials/meta pageTitle=this.pageTitle pageDescription=this.pageDescription }}
+    {{> de/partials/styles }}
+	</head>
+	<body>
+	{{> de/partials/header pageId=this.pageId }}
+    {{> content }}
+    {{> de/partials/footer }}
+    {{> de/partials/scripts }}
+	</body>
+</html>

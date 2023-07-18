@@ -23,7 +23,7 @@
 		"start-prod": "npm run build && npm run server -- dist 3001"
 	},
 	"devDependencies": {
-		"build": "git://github.com/smohadjer/build.git#semver:^1.0.0"
+		"build": "git://github.com/smohadjer/build.git#semver:^1.0.7"
 	},
 	"dependencies": {
 		"hamburgers": "0.9.3",
