@@ -1,18 +1,26 @@
-- Live: https://boilerplate.saeidmohadjer.com/
-- GitHub: https://github.com/smohadjer/boilerplate
+Live:
+- https://myendpoint.de/
+- https://boilerplate.saeidmohadjer.com/
+
+GitHub:
+- https://github.com/smohadjer/boilerplate
+
+Vercel:
+- https://vercel.com/saeid-fastmailfm/boilerplate
+
 
 ## Summary
-The Website is a static HTML site hosted on GitHub Pages for free via a custom domain. On every commit to GitHub, GitHub actions builds and deploys the static site to GitHub Pages.
+The Website is a boilerplate for minimal HTML Websites with optional backend functionality provided via Vercel's serverless functions. Code is in a public repository on GitHub and hosting can be done either via GitHub Pages or via Vercel. Vercel builds and deploys after every commit to GitHub.
 
 ## Running Website locally
 ````
 git clone https://github.com/smohadjer/boilerplate.git
 cd boilerplate
 npm install
-npm start
-vercel dev
+npm start (runs server on port 5000 and watches file for changes)
+vercel dev (runs server on port 3000, use it if you need to test serverless apis)
 ````
-Open Website at: http://localhost:3000
+Open Website at http://localhost:5000  if you ran npm start or http://localhost:3000 if you ran vercel dev.
 
 ## Favicon and touch icons
 Use https://redketchup.io/favicon-generator to generate and add favicons and shortcut icons for touch devices. Select `Generate the favicon from text`, use `Open Sans` as font, set font-size to 100 and bold and colors matching color scheme of website you are building. If you wish to use round corner note that Apple doesn't allow it in touch icons, so you need later to replace Apple touch icon with a one without a round courner. Download zip, unzip folder and copy/paste files to root of the website. These files will be copied to dist folder during build. You also need to add below snippet to heard of your pages:
