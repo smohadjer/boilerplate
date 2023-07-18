@@ -19,7 +19,7 @@ function ready(fn) {
 
 ready(function() {
 	'use strict';
-	console.log('DOM is ready!');
+	console.log('DOM is ready!!!');
 
 	// custom event for use in other scripts
 	document.dispatchEvent(new Event('domReady'));
