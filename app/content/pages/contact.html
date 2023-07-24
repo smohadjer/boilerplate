@@ -1,5 +1,14 @@
 <main>
-  {{> partials/stage image="contact.webp" }}
+  <div class="stage">
+    <img class="responsive object-fit-cover"
+      srcset="/assets/mobile/contact.webp 640w,
+              /assets/contact.webp 1920w"
+      sizes="100vw"
+      src="/assets/mobile/contact.webp"
+      width="1024"
+      height="683"
+      alt="" />
+  </div>
   <article>
     <h1>Contact</h1>
     <form method="post" action="api/contact">
