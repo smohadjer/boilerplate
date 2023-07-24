@@ -46,9 +46,10 @@
         <figcaption>Example of caption...</figcaption>
     </figure>
 
-    <section  class="handlebars">
+    <!-- using div instead of section to avoid w3c validator error for sectiokn not having a heading -->
+    <div class="handlebars">
       <!-- content is inserted via js -->
-    </section>
+    </div>
 
     <section>
       <h3>Slider Example (via swiper.js)</h3>
@@ -61,7 +62,7 @@
             <img
               class="responsive object-fit-cover"
               srcset="/assets/tennis-1920.jpg 1920w, /assets/tennis-640.jpg 640w"
-              sizes="100vw, (min-width: 1024px) 50vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               src="/assets/tennis-640.jpg"
               width="1024"
               height="683"
@@ -71,7 +72,7 @@
             <img
               class="responsive object-fit-cover"
               srcset="/assets/tennis-1920.jpg 1920w, /assets/tennis-640.jpg 640w"
-              sizes="100vw, (min-width: 1024px) 50vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               src="/assets/tennis-640.jpg"
               width="1024"
               height="683"
@@ -81,7 +82,7 @@
             <img
               class="responsive object-fit-cover"
               srcset="/assets/tennis-1920.jpg 1920w, /assets/tennis-640.jpg 640w"
-              sizes="100vw, (min-width: 1024px) 50vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               src="/assets/tennis-640.jpg"
               width="1024"
               height="683"
