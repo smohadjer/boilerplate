@@ -1,5 +1,5 @@
 <main>
-  {{> partials/stage image="tennis.jpg" }}
+  {{> partials/stage image="tennis" }}
   <article>
     <h1>Hello, I'm a h1 headline!</h1>
     <h2>And I'm a h2 headline. I'm not as strong as my bigger brother h1, so please use me for anything that is less important than him or he will beat the shit out of me! &#128521;</h2>
@@ -32,25 +32,24 @@
     {{> partials/accordion }}
 
     <p>A responsive image that doesn't grow beyond it's native size. Use for small content images that should not get blurred on large screens due to scaling up.</p>
-    <img class="responsive responsive--below-intrinsic-width" src="/assets/tennis-640.jpg" width="640" height="434" alt="tennis">
+    <img class="responsive responsive--below-intrinsic-width" src="/assets/tennis-ball-640.jpg" width="640" height="434" alt="tennis">
 
     <h4>A responsive image via srcset attribute</h4>
     <figure>
         <img class="responsive"
-             srcset="/assets/tennis.jpg 1920w, /assets/mobile/tennis.jpg 640w"
+             srcset="/assets/tennis-1920.jpg 1920w, /assets/tennis-640.jpg 640w"
              sizes="100vw"
-             src="/assets/mobile/tennis.jpg"
+             src="/assets/tennis-640.jpg"
              width="640"
              height="386"
              alt="tennis" />
         <figcaption>Example of caption...</figcaption>
     </figure>
 
-    <section>
-      <div class="handlebars">
-        <!-- content is inserted via js -->
+    <!-- using div instead of section to avoid w3c validator error for sectiokn not having a heading -->
+    <div class="handlebars">
+      <!-- content is inserted via js -->
     </div>
-    </section>
 
     <section>
       <h3>Slider Example (via swiper.js)</h3>
@@ -62,8 +61,9 @@
           <div class="swiper-slide">
             <img
               class="responsive object-fit-cover"
-              srcset="/assets/mobile/tennis.jpg 1024w, /assets/tennis.jpg 2400w"
-              src="/assets/mobile/tennis.jpg"
+              srcset="/assets/tennis-1920.jpg 1920w, /assets/tennis-640.jpg 640w"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              src="/assets/tennis-640.jpg"
               width="1024"
               height="683"
             alt="slider demo">
@@ -71,8 +71,9 @@
           <div class="swiper-slide">
             <img
               class="responsive object-fit-cover"
-              srcset="/assets/mobile/tennis.jpg 1024w, /assets/tennis.jpg 2400w"
-              src="/assets/mobile/tennis.jpg"
+              srcset="/assets/tennis-1920.jpg 1920w, /assets/tennis-640.jpg 640w"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              src="/assets/tennis-640.jpg"
               width="1024"
               height="683"
             alt="slider demo">
@@ -80,8 +81,9 @@
           <div class="swiper-slide">
             <img
               class="responsive object-fit-cover"
-              srcset="/assets/mobile/tennis.jpg 1024w, /assets/tennis.jpg 2400w"
-              src="/assets/mobile/tennis.jpg"
+              srcset="/assets/tennis-1920.jpg 1920w, /assets/tennis-640.jpg 640w"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              src="/assets/tennis-640.jpg"
               width="1024"
               height="683"
             alt="slider demo">
