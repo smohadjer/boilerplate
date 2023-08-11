@@ -23,7 +23,6 @@
 	},
 	"devDependencies": {
 		"build": "git://github.com/smohadjer/build.git#semver:^2.0.1"
-
 	},
 	"dependencies": {
 		"hamburgers": "0.9.3",
