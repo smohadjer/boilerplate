@@ -1,6 +1,9 @@
 import SiteNav from './modules/nav.js';
 import Accordion from './modules/accordion.js';
 
+declare var Handlebars: any;
+declare var myApp: any;
+
 //Helper classes to HTML for styling of nojs version
 const html = document.querySelector('html');
 html.classList.remove('no-js');
@@ -19,7 +22,7 @@ function ready(fn) {
 
 ready(function() {
 	'use strict';
-	console.log('DOM is ready!!!');
+	console.log('DOM is ready!');
 
 	// custom event for use in other scripts
 	document.dispatchEvent(new Event('domReady'));
@@ -59,7 +62,7 @@ ready(function() {
 	}
 
 	//initialize accordions
-	document.querySelectorAll('.accordion').forEach((el) => {
+	document.querySelectorAll('.accordion').forEach((el: HTMLDetailsElement) => {
 		new Accordion(el);
 	});
 });

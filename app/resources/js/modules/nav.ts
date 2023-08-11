@@ -1,3 +1,8 @@
+interface Navigation {
+	maxHeight: number;
+	nav: HTMLElement;
+}
+
 class Navigation {
 	constructor(options) {
 		this.maxHeight = undefined;
@@ -60,7 +65,7 @@ class Navigation {
 			});
 
 			if (expandedDropdowns.length > 0) {
-				const clickIsOutsideNav = event.target.closest('nav') === null ? true : false;
+				const clickIsOutsideNav = (event.target as HTMLElement).closest('nav') === null ? true : false;
 				if (clickIsOutsideNav) {
 					expandedDropdowns.forEach((dropdown) => {
 						dropdown.classList.remove('expanded');
