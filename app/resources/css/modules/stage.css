@@ -1,0 +1,15 @@
+.stage {
+  height: 40vh;
+  background: #ccc;
+}
+@media (min-width: 1024px) {
+  .stage {
+    height: 60vh;
+  }
+}
+.stage img {
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  display: block;
+}
