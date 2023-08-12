@@ -17,14 +17,15 @@ This is a boilerplate for minimal HTML Websites with optional backend functional
 - Node.js
 - Vercel CLI (optional)
 
-## Running Website locally
+## How to use
 ````
 git clone https://github.com/smohadjer/boilerplate.git
 cd boilerplate
 npm install
-npm start (runs server on port 5000 and watches file for changes)
-npm start-prod (runs server on port 3001 for testing production version)
-vercel dev (runs server on port 3000, use it if you need to test serverless apis)
+npm run build --> builds a production ready version in public folder
+npm start --> runs a local server on port 5000 and watches file for changes
+npm start-prod --> runs a local server on port 3001 for testing production version
+vercel dev --> runs a local server on port 3000, use for testing serverless functions in api folder
 ````
 
 ## Using local build package
