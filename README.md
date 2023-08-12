@@ -11,7 +11,11 @@ Build:
 - https://github.com/smohadjer/build
 
 ## Summary
-The Website is a boilerplate for minimal HTML Websites with optional backend functionality provided via Vercel's serverless functions. Code is in a public repository on GitHub and hosting can be done either via GitHub Pages or via Vercel. Vercel builds and deploys after every commit to GitHub.
+This is a boilerplate for minimal HTML Websites with optional backend functionality provided via Vercel's serverless functions. Code is in a public repository on GitHub and hosting can be done either via GitHub Pages or via Vercel. Vercel builds and deploys after every commit to GitHub.
+
+## Dependencies
+- Node.js
+- Vercel CLI (optional)
 
 ## Running Website locally
 ````
