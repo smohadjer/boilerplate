@@ -2,13 +2,14 @@ form {
   margin-top: 30px;
 
   /* to avoid zooming on iPhone when input or textarea get the focus we need to set font-size at least to 16px */
-  :is(input), textarea {
+  :is(input),
+  :is(textarea) {
     font-size: 16px;
   }
 
   /* fix styling of date input fields on iphone */
   :is(input)[type="date"] {
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;*/
     min-height: 2em;
     background: none;
   }
@@ -24,7 +25,7 @@ form {
 
   :is(button) {
     font-size: 18px;
-    background: $blue;
+    background: #225E90;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -51,7 +52,7 @@ form {
       display: none;
     }
 
-    &:is(--two-columns) {
+    &.row--two-columns {
       :is(label) {
         display: inline-block;
         min-width: 200px;

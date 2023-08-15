@@ -41,7 +41,7 @@
     transform: rotate(180deg);
   }
 
-  &:is(__content) {
+  :is(.accordion__content) {
     padding-bottom: 1em;
 
     > *:first-child {
