@@ -36,3 +36,7 @@
   src: url("../../fonts/OpenSans-Bold.ttf") format("truetype");
   font-weight: bold;
 }
+
+:root {
+  --primary-color: #225E90;
+}

@@ -24,7 +24,7 @@ body {
 }
 
 a {
-  color: #225E90;
+  color: var(--primary-color);
 
   &.external {
     background: url(../../img/external.svg) no-repeat left center;

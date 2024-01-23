@@ -10,7 +10,7 @@
     padding: 0.5em 0;
     font-weight: 500;
     list-style-type: none;
-    color: #225E90;
+    color: var(--primary-color);
     padding-left: 25px;
     text-indent: -25px;
 
