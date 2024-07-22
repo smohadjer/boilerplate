@@ -1,6 +1,6 @@
 # Boilerplate
 
-- Live: https://myendpoint.de/
+- Live: https://boilerplate.saeidmohadjer.com/
 - GitHub: https://github.com/smohadjer/boilerplate
 - Vercel: https://vercel.com/saeid-fastmailfm/boilerplate
 - Build: https://github.com/smohadjer/build
