@@ -5,7 +5,7 @@ interface Navigation {
 
 class Navigation {
 	constructor(options) {
-		this.maxHeight = undefined;
+		this.maxHeight = 0;
 		this.nav = options.element;
 
 		let self = this;
@@ -32,12 +32,12 @@ class Navigation {
 		}
 	}
 
-	initDropdown(dropdowns) {
+	initDropdown(dropdowns: NodeListOf<Element>) {
 		const mediaQuery = window.matchMedia('(max-width: 767px)');
 
 		dropdowns.forEach(dropdown => {
 			dropdown.addEventListener('click', (event) => {
-				const navItem = event.target.closest('li');
+				const navItem = event.target!.closest('li');
 				if (!mediaQuery.matches) {
 					const otherNavItems = [...navItem.parentNode.children].filter((child) => child !== navItem);
 					otherNavItems.forEach((item) => {
@@ -57,7 +57,7 @@ class Navigation {
 
 		//Click outside dropdowns should close all expanded dropdowns
 		document.addEventListener('click', (event) => {
-			const expandedDropdowns = [];
+			const expandedDropdowns: Element[] = [];
 			dropdowns.forEach((dropdown) => {
 				if (dropdown.classList.contains('expanded')) {
 					expandedDropdowns.push(dropdown);

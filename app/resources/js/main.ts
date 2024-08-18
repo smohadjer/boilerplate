@@ -6,8 +6,8 @@ declare var myApp: any;
 
 //Helper classes to HTML for styling of nojs version
 const html = document.querySelector('html');
-html.classList.remove('no-js');
-html.classList.add('js');
+html!.classList.remove('no-js');
+html!.classList.add('js');
 
 //taken from http://youmightnotneedjquery.com/
 function ready(fn) {
@@ -62,7 +62,7 @@ ready(function() {
 	}
 
 	//initialize accordions
-	document.querySelectorAll('.accordion').forEach((el: HTMLDetailsElement) => {
-		new Accordion(el);
+	document.querySelectorAll<HTMLDetailsElement>('.accordion').forEach((element: HTMLDetailsElement) => {
+		new Accordion(element);
 	});
 });

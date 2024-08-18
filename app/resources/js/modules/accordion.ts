@@ -2,7 +2,7 @@ interface Accordion {
   el: HTMLDetailsElement;
   summary: HTMLElement;
   content: HTMLElement;
-  animation: Animation;
+  animation: Animation | null;
   isClosing: boolean;
   isExpanding: boolean;
 }
@@ -12,9 +12,9 @@ class Accordion {
     // Store the <details> element
     this.el = el;
     // Store the <summary> element
-    this.summary = el.querySelector('summary');
+    this.summary = el.querySelector('summary')!;
     // Store the <div class="content"> element
-    this.content = el.querySelector('.accordion__content');
+    this.content = el.querySelector('.accordion__content')!;
 
     // Store the animation object (so we can cancel it if needed)
     this.animation = null;
