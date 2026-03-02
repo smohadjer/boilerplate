@@ -1,6 +1,6 @@
 {
 	"name": "boilerplate",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Boilerplate for Web projects",
 	"repository": {
 		"type": "git",
@@ -17,17 +17,17 @@
 		"server": "node node_modules/build/bin/server.js",
 		"bundle": "node node_modules/build/bin/bundle.js",
 		"serve": "npm run compile && npm run copy && npm run hbs",
-		"start": "npm run serve && npm run bundle -- watch & npm run watch & npm run server -- public 5000",
+		"start": "npm run serve && npm run bundle -- watch & npm run watch & npm run server -- public 3000",
 		"build": "npm run serve && npm run bundle",
 		"start-prod": "npm run build & npm run server -- public 3001"
 	},
 	"devDependencies": {
-		"build": "git://github.com/smohadjer/build.git#semver:^2.0.12"
+		"build": "git://github.com/smohadjer/build.git#semver:^2.0.13"
 	},
 	"dependencies": {
 		"hamburgers": "0.9.3",
 		"helpers": "git+https://github.com/smohadjer/helpers.git",
-		"swiper": "^10.0.4",
+		"swiper": "^12.1.2",
 		"handlebars": "^4.7.8"
 	},
 	"engines": {
