@@ -23,6 +23,12 @@ body {
   }
 }
 
+a,
+button,
+[role="button"] {
+  touch-action: manipulation;
+}
+
 a {
   color: var(--primary-color);
 
