@@ -65,4 +65,46 @@ ready(function() {
 	document.querySelectorAll<HTMLDetailsElement>('.accordion').forEach((element: HTMLDetailsElement) => {
 		new Accordion(element);
 	});
+
+	const contactForm = document.querySelector<HTMLFormElement>('#contact-form');
+	const contactFormStatus = document.querySelector<HTMLElement>('#contact-form-status');
+	const contactFormError = document.querySelector<HTMLElement>('#contact-form-error');
+
+	if (contactForm && contactFormStatus && contactFormError) {
+		contactForm.addEventListener('submit', async function(event) {
+			event.preventDefault();
+			const submitButton = contactForm.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+			if (!submitButton) {
+				return;
+			}
+
+			submitButton.disabled = true;
+			contactFormStatus.hidden = true;
+			contactFormError.hidden = true;
+
+			try {
+				const response = await fetch(contactForm.action, {
+					method: contactForm.method,
+					body: new URLSearchParams(new FormData(contactForm) as any),
+					headers: { Accept: 'application/json' }
+				});
+				const result = await response.json();
+
+				if (!response.ok) {
+					throw new Error(result.error || 'Your message could not be sent.');
+				}
+
+				contactForm.hidden = true;
+				contactFormStatus.textContent = result.message || 'Your message was sent successfully.';
+				contactFormStatus.hidden = false;
+				contactFormStatus.focus();
+			} catch (error) {
+				contactFormError.textContent = error instanceof Error ? error.message : 'Your message could not be sent.';
+				contactFormError.hidden = false;
+				contactFormError.focus();
+				submitButton.disabled = false;
+			}
+		});
+	}
 });
