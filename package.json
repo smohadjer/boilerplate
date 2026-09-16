@@ -22,15 +22,15 @@
 		"start-prod": "npm run build & npm run server -- public 3001"
 	},
 	"devDependencies": {
-		"@types/nodemailer": "^8.0.1",
+		"@types/nodemailer": "^8.0.2",
 		"build": "git://github.com/smohadjer/build.git#semver:^2.0.15"
 	},
 	"dependencies": {
-		"hamburgers": "0.9.3",
-		"handlebars": "^4.7.8",
+		"hamburgers": "^1.2.1",
+		"handlebars": "^4.7.9",
 		"helpers": "git+https://github.com/smohadjer/helpers.git",
-		"nodemailer": "^9.0.5",
-		"swiper": "^12.1.2"
+		"nodemailer": "^10.0.10",
+		"swiper": "^14.2.0"
 	},
 	"engines": {
 		"node": ">=v24.15.0"
